@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
+
+  - repo: local
+    hooks:
+      - id: reject-sensitive-files
+        name: Reject staged env and secret files
+        entry: scripts/check-sensitive-files.sh
+        language: script
+        pass_filenames: false
+        always_run: true

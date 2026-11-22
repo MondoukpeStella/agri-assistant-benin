@@ -1,0 +1,10 @@
+title = "agri-assistant-benin"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Public example environment files contain placeholders only."
+paths = [
+  '''(^|/)\.env\.example$''',
+]
