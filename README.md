@@ -43,6 +43,10 @@ Réduire le manque d'information sur les prix agricoles en donnant accès à une
 - Hors du sujet des prix du maïs et du riz, rediriger poliment la conversation.
 - Aucune nouvelle consultation de prix hors connexion ; seul l'historique local reste consultable.
 
+## Backend
+
+Le socle FastAPI est dans [`backend/`](backend/README.md). `GET /health` confirme que le processus répond. Il ne consulte aucun prix.
+
 ## Application mobile
 
 Le socle Android est dans [`mobile/`](mobile/README.md). Il affiche un écran technique de démarrage et ne consulte aucun prix. Prérequis, installation et lancement avec Expo Go : voir ce README.
@@ -52,6 +56,7 @@ Le socle Android est dans [`mobile/`](mobile/README.md). Il affiche un écran te
 - [Périmètre produit et décisions du MVP](docs/PRODUCT_SCOPE.md)
 - [Modèle de description des issues](docs/ISSUE_TEMPLATE.md)
 - [Décision : socle mobile Expo](docs/decisions/ADR-001-mobile-expo-foundation.md)
+- [Décision : socle backend FastAPI](docs/decisions/ADR-002-backend-foundation.md)
 
 ## Contrôles locaux
 
