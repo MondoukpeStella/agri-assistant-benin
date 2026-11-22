@@ -178,6 +178,7 @@ function applyResult(state, result) {
         createMessage({
           role: 'assistant',
           kind: 'price',
+          responseStatus: 'price',
           price: { ...result.price, historical: false },
           historical: false,
         }),
@@ -193,7 +194,12 @@ function applyResult(state, result) {
     notice: phase,
     messages: [
       ...state.messages,
-      createMessage({ role: 'assistant', kind: 'text', text }),
+      createMessage({
+        role: 'assistant',
+        kind: 'text',
+        text,
+        responseStatus: kind,
+      }),
     ],
   };
 }
@@ -214,13 +220,16 @@ function messageFor(kind, result) {
 function createMessage(fields) {
   nextMessageId += 1;
   return {
-    id: `m${nextMessageId}`,
+    id: `m${nextMessageId}-${Date.now().toString(36)}-${Math.random()
+      .toString(36)
+      .slice(2, 8)}`,
     role: 'user',
     kind: 'text',
     text: '',
     price: null,
     historical: false,
     createdAt: null,
+    responseStatus: 'question',
     ...fields,
   };
 }

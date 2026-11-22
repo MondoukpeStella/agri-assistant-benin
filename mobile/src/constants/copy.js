@@ -44,6 +44,8 @@ export const COPY = {
   settingsLanguageAction: 'Changer de langue',
   historyTitle: 'Historique · 7 jours',
   historyEmpty: 'Aucun historique enregistré pour le moment.',
+  historyUnavailable: "L'historique local n'est pas disponible.",
+  historyStorageFull: "L'historique n'a pas pu être enregistré.",
   historyNote:
     'Les conversations sont supprimées après 7 jours. Ce ne sont pas des prix actualisés.',
   historyClose: 'Retour',

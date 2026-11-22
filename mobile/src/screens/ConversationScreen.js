@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   Image,
   KeyboardAvoidingView,
@@ -28,6 +28,7 @@ import {
   finishListening,
 } from '../services/conversation';
 import { requestPriceConsultation } from '../services/conversationClient';
+import { createDefaultHistoryStore } from '../storage/historyStore';
 import { useScreenInsets } from '../layout/useScreenInsets';
 import SettingsPanel, { LanguageSettings } from './SettingsPanel';
 import VoicePanel from './VoicePanel';
@@ -35,7 +36,7 @@ import VoicePanel from './VoicePanel';
 async function defaultResult() {
   const result = await requestPriceConsultation();
   if (result?.type === 'not_connected') {
-    return { kind: 'unavailable' };
+    return { kind: 'unavailable', persist: false };
   }
   return result?.kind ? result : { kind: 'unavailable' };
 }
@@ -46,14 +47,86 @@ export default function ConversationScreen({
   resolveResult = defaultResult,
   onStageTranscription,
   onChangeLanguage,
+  historyStore = null,
 }) {
   const [state, setState] = useState(
     () => initialState ?? createConversation(),
   );
   const [language, setLanguage] = useState(languageProp);
+  const [historyProblem, setHistoryProblem] = useState(null);
   const insets = useScreenInsets();
   const [panel, setPanel] = useState(null);
   const sendingRef = useRef(state.phase === 'sending');
+  const storePromiseRef = useRef(null);
+  const openStore = useCallback(() => {
+    if (!storePromiseRef.current) {
+      storePromiseRef.current = Promise.resolve(
+        historyStore ?? createDefaultHistoryStore(),
+      );
+    }
+    return storePromiseRef.current;
+  }, [historyStore]);
+
+  useEffect(() => {
+    let active = true;
+    openStore()
+      .then((store) => store.load(new Date().toISOString()))
+      .then((result) => {
+        if (!active) {
+          return;
+        }
+        if (!result?.ok) {
+          setHistoryProblem('unavailable');
+          return;
+        }
+        if (result.messages.length === 0) {
+          return;
+        }
+        setState((current) => ({
+          ...current,
+          messages: mergeHistory(result.messages, current.messages),
+        }));
+      })
+      .catch(() => {
+        if (active) {
+          setHistoryProblem('unavailable');
+        }
+      });
+    return () => {
+      active = false;
+    };
+  }, [openStore]);
+
+  useEffect(() => {
+    const turn = state.pendingSave;
+    if (!turn) {
+      return undefined;
+    }
+    let active = true;
+    openStore()
+      .then((store) => store.save(turn, new Date().toISOString()))
+      .then((outcome) => {
+        if (!active) {
+          return;
+        }
+        if (!active || outcome?.ok) {
+          return;
+        }
+        setHistoryProblem(
+          outcome.reason === 'full' || outcome.reason === 'write'
+            ? 'full'
+            : 'unavailable',
+        );
+      })
+      .catch(() => {
+        if (active) {
+          setHistoryProblem('full');
+        }
+      });
+    return () => {
+      active = false;
+    };
+  }, [openStore, state.pendingSave]);
   const sending = state.phase === 'sending';
   const voiceOpen =
     state.phase === 'listening' ||
@@ -96,9 +169,24 @@ export default function ConversationScreen({
         if (started.phase !== 'sending') {
           return current;
         }
-        return result?.kind === 'networkError'
-          ? failSend(started)
-          : completeSend(started, result);
+        if (result?.kind === 'networkError') {
+          return failSend(started);
+        }
+        const next = completeSend(started, result);
+        if (result?.persist === false) {
+          return next;
+        }
+        const known = new Set(started.messages.map((message) => message.id));
+        const added = next.messages.filter(
+          (message) => !message.historical && !known.has(message.id),
+        );
+        if (added.length === 0) {
+          return next;
+        }
+        return {
+          ...next,
+          pendingSave: { language, messages: added },
+        };
       });
     } finally {
       sendingRef.current = false;
@@ -210,17 +298,27 @@ export default function ConversationScreen({
           <LanguageSettings language={language} onSave={saveLanguage} />
         ) : panel === 'history' ? (
           <View testID="history-screen">
-            {historicalMessages.some((message) => message.text) ? (
+            {historyProblem === 'unavailable' ? (
+              <Text style={styles.greeting}>{COPY.historyUnavailable}</Text>
+            ) : historicalMessages.some((message) => message.text) ? (
               historicalMessages
                 .filter((message) => message.text)
                 .map((message) => (
                   <View key={message.id} style={styles.historyItem}>
                     <Text style={styles.historyItemText}>{message.text}</Text>
+                    {message.createdAt ? (
+                      <Text style={styles.historyNote}>
+                        {COPY.historical} · {message.createdAt}
+                      </Text>
+                    ) : null}
                   </View>
                 ))
             ) : (
               <Text style={styles.greeting}>{COPY.historyEmpty}</Text>
             )}
+            {historyProblem === 'full' ? (
+              <Text style={styles.historyNote}>{COPY.historyStorageFull}</Text>
+            ) : null}
             <Text style={styles.historyNote}>{COPY.historyNote}</Text>
           </View>
         ) : (
@@ -331,6 +429,14 @@ export default function ConversationScreen({
       )}
     </KeyboardAvoidingView>
   );
+}
+
+function mergeHistory(loaded, current) {
+  const currentIds = new Set(current.map((message) => message.id));
+  return [
+    ...loaded.filter((message) => !currentIds.has(message.id)),
+    ...current,
+  ];
 }
 
 const styles = StyleSheet.create({
