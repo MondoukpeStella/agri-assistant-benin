@@ -1,17 +1,23 @@
-import { Pressable, ScrollView, StyleSheet, Text } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import { SUGGESTIONS } from '../services/conversation';
 import { colors } from '../constants/theme';
+import { SUGGESTIONS } from '../services/conversation';
 
-export default function SuggestionList({ onSelect, disabled = false }) {
+export default function SuggestionList({
+  onSelect,
+  disabled = false,
+  sentTexts = [],
+}) {
+  const visible = SUGGESTIONS.filter(
+    (suggestion) => !sentTexts.includes(suggestion),
+  );
+  if (visible.length === 0) {
+    return null;
+  }
+
   return (
-    <ScrollView
-      horizontal
-      contentContainerStyle={styles.row}
-      keyboardShouldPersistTaps="handled"
-      testID="suggestions"
-    >
-      {SUGGESTIONS.map((suggestion) => (
+    <View testID="suggestions">
+      {visible.map((suggestion) => (
         <Pressable
           key={suggestion}
           accessibilityRole="button"
@@ -25,26 +31,23 @@ export default function SuggestionList({ onSelect, disabled = false }) {
           <Text style={styles.label}>{suggestion}</Text>
         </Pressable>
       ))}
-    </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  row: {
-    gap: 8,
-    paddingVertical: 8,
-  },
   chip: {
     backgroundColor: colors.surface,
-    borderColor: colors.border,
-    borderRadius: 20,
+    borderColor: colors.primary,
+    borderRadius: 22,
     borderWidth: 1,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
+    marginBottom: 8,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
   },
   label: {
-    color: colors.text,
-    fontSize: 15,
-    lineHeight: 20,
+    color: colors.primary,
+    fontSize: 16,
+    lineHeight: 22,
   },
 });

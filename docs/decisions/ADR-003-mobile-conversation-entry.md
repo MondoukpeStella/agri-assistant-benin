@@ -6,7 +6,7 @@
 
 ## Contexte
 
-Le socle Expo affichait un écran technique. Le premier parcours agriculteur choisit la langue, présente une introduction, puis ouvre une conversation sans consulter de prix tant que l'écran n'est pas relié au backend.
+Le socle Expo affichait un écran technique. Le premier parcours agriculteur choisit la langue, présente une introduction, puis ouvre une conversation sans consulter de prix tant que l'écran n'est pas relié au backend. La maquette de référence est le fichier Figma « Agri-Assistant Bénin — Maquettes MVP ».
 
 ## Options examinées
 
@@ -16,9 +16,9 @@ Le socle Expo affichait un écran technique. Le premier parcours agriculteur cho
 
 ## Décision
 
-Le navigateur interne passe de la langue à l'introduction, puis à la conversation. Au lancement suivant, une langue `fr` ou `fon` mémorisée ouvre directement la conversation. Le français propose la saisie et les suggestions. Le fon masque le champ de texte. Aucune phrase fon n'est affichée : l'introduction vocale reste marquée non validée tant qu'un locuteur natif ne l'a pas fournie. L'entrée vocale ne fabrique pas de transcription. Les états de réponse, y compris un prix complet, sont affichés par des composants purs. L'application réelle ne leur fournit pas de prix.
+Le navigateur interne suit la maquette : Démarrer, le choix de langue confirmé par Continuer, l'introduction, puis la conversation. Au lancement suivant, Démarrer rouvre le choix de langue avec la langue déjà mémorisée. Continuer ouvre alors la conversation. Le français propose la saisie, les suggestions et le micro de la barre, comme la maquette. Le fon n'affiche pas de texte : seulement le grand micro. Si l'enregistrement ne fournit rien, la page reste sans phrase de secours. Aucune phrase fon n'est affichée : l'introduction vocale reste marquée non validée tant qu'un locuteur natif ne l'a pas fournie. Le micro ouvre l'écran « Je vous écoute… » et n'envoie une demande qu'après une transcription fournie puis confirmée. L'en-tête ouvre Réglages. Cette page mène à l'historique ou au changement de langue, sans repasser par l'introduction. Les états de réponse, y compris un prix complet, sont affichés par des composants purs. L'application réelle ne leur fournit pas de prix. Le montant d'exemple de la maquette n'est pas repris.
 
-L'historique de sept jours reste l'objet de l'issue 006. Cet écran sait seulement distinguer visuellement un message marqué historique.
+L'historique de sept jours reste l'objet de l'issue 006. Depuis Réglages, Historique des conversations ne liste que les messages déjà marqués comme historiques.
 
 ## Justification
 
@@ -35,7 +35,8 @@ React Navigation et SQLite ne sont pas nécessaires pour ce parcours. Inventer u
 ### Négatives
 
 - Le bouton de démarrage fon affiche « OK », faute de libellé validé.
-- Le bouton vocal annonce que l'entrée n'est pas disponible.
+- Sans transcription fournie, l'arrêt du micro annonce que l'entrée vocale n'est pas disponible.
+- Le bouton « Écouter la réponse » n'émet pas encore de son.
 - La vérification clavier sur un petit téléphone Android reste manuelle.
 
 ## Alternatives rejetées

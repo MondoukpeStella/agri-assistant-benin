@@ -29,27 +29,23 @@ describe('ConversationScreen', () => {
     ).toBeTruthy();
     expect(screen.queryByText(/XOF|FCFA/)).toBeNull();
 
-    fireEvent.changeText(
-      screen.getByTestId('draft-input'),
-      'Prix du riz à Savalou',
-    );
+    fireEvent.changeText(screen.getByTestId('draft-input'), SUGGESTION_RICE);
     await user.press(screen.getByTestId('send-button'));
     expect(
       within(screen.getByTestId('message-list')).getByText(SUGGESTION_RICE),
     ).toBeTruthy();
+    expect(screen.getByTestId('draft-input').props.value).toBe('');
   });
 
-  test('hides the text field in Fon and still accepts a suggestion', async () => {
+  test('shows only the microphone in Fon, without fallback text', async () => {
     const screen = await render(<ConversationScreen language="fon" />);
-    const user = userEvent.setup();
 
     expect(screen.queryByTestId('draft-input')).toBeNull();
+    expect(screen.queryByTestId('composer')).toBeNull();
+    expect(screen.queryByTestId('suggestion-rice')).toBeNull();
+    expect(screen.queryByText(COPY.greeting)).toBeNull();
+    expect(screen.queryByText(COPY.voicePending)).toBeNull();
     expect(screen.getByTestId('voice-button')).toBeTruthy();
-    await user.press(screen.getByTestId('suggestion-rice'));
-    expect(
-      within(screen.getByTestId('message-list')).getByText(SUGGESTION_RICE),
-    ).toBeTruthy();
-    expect(screen.queryByText(/XOF|FCFA/)).toBeNull();
   });
 
   test('keeps a long message inside the scrolling conversation', async () => {
@@ -96,10 +92,7 @@ describe('ConversationScreen', () => {
     );
     const user = userEvent.setup();
 
-    fireEvent.changeText(
-      screen.getByTestId('draft-input'),
-      'Prix du maïs à Natitingou',
-    );
+    fireEvent.changeText(screen.getByTestId('draft-input'), SUGGESTION_MAIZE);
     await user.press(screen.getByTestId('send-button'));
 
     expect(screen.getByText(COPY.network)).toBeTruthy();
@@ -160,8 +153,13 @@ describe('ConversationScreen', () => {
     await userEvent.setup().press(screen.getByTestId('suggestion-maize'));
 
     expect(screen.getByTestId('current-price')).toBeTruthy();
-    expect(screen.getByText('200 XOF / kg')).toBeTruthy();
-    expect(screen.getByText('2026-11-20')).toBeTruthy();
+    expect(screen.getByText('200 XOF/kg')).toBeTruthy();
+    expect(screen.getByText('Date de collecte : 2026-11-20')).toBeTruthy();
+    expect(screen.getAllByTestId('current-price')).toHaveLength(1);
+    expect(screen.queryByText(/250|FCFA|Données fictives/)).toBeNull();
+
+    await userEvent.setup().press(screen.getByTestId('listen-button'));
+    expect(screen.queryByText(COPY.listenPending)).toBeNull();
     expect(screen.getAllByTestId('current-price')).toHaveLength(1);
   });
 
@@ -193,17 +191,20 @@ describe('ConversationScreen', () => {
     const screen = await render(
       <ConversationScreen
         language="fon"
-        onStageTranscription={() => 'Prix du riz à Savalou'}
+        onStageTranscription={() => SUGGESTION_RICE}
       />,
     );
 
     const user = userEvent.setup();
     await user.press(screen.getByTestId('voice-button'));
+    expect(await screen.findByText(COPY.voiceListening)).toBeTruthy();
+    await user.press(screen.getByTestId('voice-stop'));
     expect(await screen.findByText(COPY.confirmTitle)).toBeTruthy();
     await user.press(screen.getByTestId('repeat-button'));
     expect(screen.queryByText(COPY.confirmTitle)).toBeNull();
 
     await user.press(screen.getByTestId('voice-button'));
+    await user.press(screen.getByTestId('voice-stop'));
     await user.press(screen.getByTestId('confirm-button'));
     expect(
       within(screen.getByTestId('message-list')).getByText(SUGGESTION_RICE),
@@ -213,9 +214,14 @@ describe('ConversationScreen', () => {
   test('does not invent a transcription when voice is not connected', async () => {
     const screen = await render(<ConversationScreen language="fr" />);
 
-    await userEvent.setup().press(screen.getByTestId('voice-button'));
+    const user = userEvent.setup();
+    await user.press(screen.getByTestId('voice-button'));
+    expect(screen.getByText(COPY.voiceListening)).toBeTruthy();
+    await user.press(screen.getByTestId('voice-stop'));
 
-    expect(screen.getByText(COPY.voicePending)).toBeTruthy();
+    expect(screen.queryByText(COPY.voicePending)).toBeNull();
+    expect(screen.getByTestId('voice-button')).toBeTruthy();
+    expect(screen.queryByText(/«/)).toBeNull();
     expect(screen.queryByTestId('current-price')).toBeNull();
   });
 });

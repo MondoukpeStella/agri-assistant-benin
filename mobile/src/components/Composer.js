@@ -1,11 +1,13 @@
-import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Pressable, StyleSheet, TextInput, View } from 'react-native';
 
 import { COPY } from '../constants/copy';
 import { colors } from '../constants/theme';
+import { ArrowIcon, MicIcon } from './icons';
 
 export default function Composer({
   language,
   draft,
+  draftGeneration = 0,
   sending,
   onChangeDraft,
   onSend,
@@ -19,9 +21,11 @@ export default function Composer({
         <TextInput
           accessibilityLabel={COPY.draftLabel}
           editable={!sending}
+          key={draftGeneration}
           multiline
           onChangeText={onChangeDraft}
           placeholder={COPY.draftLabel}
+          placeholderTextColor={colors.muted}
           style={styles.input}
           testID="draft-input"
           value={draft}
@@ -29,23 +33,24 @@ export default function Composer({
       ) : null}
       {showText ? (
         <Pressable
+          accessibilityLabel={COPY.send}
           accessibilityRole="button"
           disabled={sending}
           onPress={onSend}
-          style={styles.button}
+          style={[styles.send, sending ? styles.disabled : null]}
           testID="send-button"
         >
-          <Text style={styles.buttonText}>{COPY.send}</Text>
+          <ArrowIcon />
         </Pressable>
       ) : null}
       <Pressable
-        accessibilityRole="button"
         accessibilityLabel={COPY.voice}
+        accessibilityRole="button"
         onPress={onVoice}
-        style={styles.button}
+        style={styles.mic}
         testID="voice-button"
       >
-        <Text style={styles.buttonText}>{COPY.voice}</Text>
+        <MicIcon />
       </Pressable>
     </View>
   );
@@ -56,11 +61,13 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     flexDirection: 'row',
     gap: 8,
+    paddingBottom: 4,
+    paddingTop: 8,
   },
   input: {
     backgroundColor: colors.surface,
     borderColor: colors.border,
-    borderRadius: 12,
+    borderRadius: 24,
     borderWidth: 1,
     color: colors.text,
     flex: 1,
@@ -68,19 +75,26 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     maxHeight: 120,
     minHeight: 48,
-    paddingHorizontal: 12,
+    paddingHorizontal: 16,
     paddingVertical: 10,
   },
-  button: {
-    backgroundColor: colors.text,
-    borderRadius: 12,
-    minHeight: 48,
+  send: {
+    alignItems: 'center',
+    backgroundColor: colors.primary,
+    borderRadius: 24,
+    height: 48,
     justifyContent: 'center',
-    paddingHorizontal: 12,
+    width: 48,
   },
-  buttonText: {
-    color: colors.surface,
-    fontSize: 16,
-    fontWeight: '700',
+  mic: {
+    alignItems: 'center',
+    backgroundColor: colors.primary,
+    borderRadius: 24,
+    height: 48,
+    justifyContent: 'center',
+    width: 48,
+  },
+  disabled: {
+    opacity: 0.5,
   },
 });

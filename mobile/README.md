@@ -1,6 +1,6 @@
 # Application mobile
 
-Application Android du MVP, en React Native et JavaScript, avec Expo SDK 58. Au premier lancement, l'agriculteur choisit le français ou le fon, lit l'introduction, puis arrive sur la conversation. Aucun prix n'est consulté tant que l'écran n'est pas relié au backend.
+Application Android du MVP, en React Native et JavaScript, avec Expo SDK 58. L'écran suit la maquette : Démarrer, choix de la langue, introduction, puis conversation. Aucun prix n'est consulté tant que l'écran n'est pas relié au backend.
 
 Les décisions sont enregistrées dans [`docs/decisions/ADR-001-mobile-expo-foundation.md`](../docs/decisions/ADR-001-mobile-expo-foundation.md) et [`docs/decisions/ADR-003-mobile-conversation-entry.md`](../docs/decisions/ADR-003-mobile-conversation-entry.md).
 
@@ -37,13 +37,13 @@ Expo affiche un QR code.
 
 1. Ouvrir Expo Go sur le téléphone Android.
 2. Scanner le QR code.
-3. Choisir Français ou Fon, puis Commencer ou OK. La conversation s'ouvre sans montant.
+3. Appuyer sur Démarrer. L'écran de langue s'ouvre, avec la langue déjà mémorisée présélectionnée. Choisir Français ou Fon, puis Continuer. Une nouvelle langue passe par l'introduction ; la même langue ouvre la conversation, sans montant. L'engrenage dans l'en-tête ouvre Réglages : l'historique ou le changement de langue.
 
 Le rechargement après une modification d'interface se fait dans le terminal Expo avec la touche `r`, ou par le menu de développement d'Expo Go.
 
 ## Variables d'environnement
 
-Aucune variable n'est obligatoire. Sans fichier `.env`, l'application démarre sur le choix de la langue.
+Aucune variable n'est obligatoire. Sans fichier `.env`, l'application ouvre l'écran Démarrer.
 
 Pour nommer explicitement l'environnement local :
 
@@ -135,7 +135,7 @@ npx expo start --port 8082
 
 ### Fichier `.env` absent
 
-Le démarrage reste possible. L'application ouvre le choix de la langue.
+Le démarrage reste possible. L'application ouvre l'écran Démarrer.
 
 ### Secret ajouté par erreur
 

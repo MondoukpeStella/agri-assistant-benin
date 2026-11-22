@@ -49,7 +49,7 @@ Le socle FastAPI est dans [`backend/`](backend/README.md). `GET /health` confirm
 
 ## Application mobile
 
-L'application Android est dans [`mobile/`](mobile/README.md). Le premier écran demande la langue, puis ouvre la conversation. Aucun prix n'est encore consulté. Prérequis, installation et lancement avec Expo Go : voir ce README.
+L'application Android est dans [`mobile/`](mobile/README.md). Le parcours suit la maquette : Démarrer, la langue, puis la conversation. Aucun prix n'est encore consulté. Prérequis, installation et lancement avec Expo Go : voir ce README.
 
 ## Documentation
 

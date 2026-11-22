@@ -1,7 +1,11 @@
 import {
+  applyDraftChange,
+  beginListening,
   beginSend,
   canShowPrice,
+  cancelVoice,
   createConversation,
+  finishListening,
   submitText,
 } from '../src/services/conversation';
 
@@ -28,7 +32,38 @@ describe('conversation state', () => {
     const second = beginSend(started, 'Prix du riz à Savalou');
 
     expect(second).toBe(started);
+    expect(started.draft).toBe('');
     expect(started.pendingText).toBe('Prix du maïs à Natitingou');
+  });
+
+  test('clears the draft on send and ignores the previous field text', () => {
+    const typed = { ...createConversation(), draft: 'Prix du riz à Savalou' };
+    const started = beginSend(typed, typed.draft);
+    const echoed = applyDraftChange(
+      started,
+      'Prix du riz à Savalou',
+      typed.draftGeneration,
+    );
+    const sent = submitText(typed, typed.draft, { kind: 'unavailable' });
+
+    expect(started.draft).toBe('');
+    expect(echoed).toBe(started);
+    expect(sent.draft).toBe('');
+  });
+
+  test('listens without inventing a transcription', () => {
+    const listening = beginListening(createConversation());
+    const cancelled = cancelVoice(listening);
+    const empty = finishListening(listening, '');
+    const heard = finishListening(listening, 'Prix du riz à Savalou');
+
+    expect(listening.phase).toBe('listening');
+    expect(listening.pendingTranscription).toBeNull();
+    expect(cancelled.phase).toBe('idle');
+    expect(empty.notice).toBe('voiceUnavailable');
+    expect(empty.pendingTranscription).toBeNull();
+    expect(heard.phase).toBe('transcriptionConfirm');
+    expect(heard.pendingTranscription).toBe('Prix du riz à Savalou');
   });
 
   test('keeps the draft when the network fails and does not add a price', () => {

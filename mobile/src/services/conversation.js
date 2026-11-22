@@ -5,6 +5,7 @@ let nextMessageId = 1;
 export function createConversation(messages = []) {
   return {
     draft: '',
+    draftGeneration: 0,
     pendingText: null,
     pendingTranscription: null,
     phase: 'idle',
@@ -24,7 +25,17 @@ export function canShowPrice(price) {
 }
 
 export function setDraft(state, draft) {
+  if (state.phase === 'sending') {
+    return state;
+  }
   return { ...state, draft };
+}
+
+export function applyDraftChange(state, draft, generation) {
+  if (generation !== state.draftGeneration) {
+    return state;
+  }
+  return setDraft(state, draft);
 }
 
 export function beginSend(state, rawText) {
@@ -35,6 +46,7 @@ export function beginSend(state, rawText) {
   return {
     ...state,
     draft: '',
+    draftGeneration: (state.draftGeneration ?? 0) + 1,
     pendingText: text,
     pendingTranscription: null,
     phase: 'sending',
@@ -61,6 +73,7 @@ export function completeSend(state, result) {
   }
   const withUser = {
     ...state,
+    draft: '',
     pendingText: null,
     messages: [
       ...state.messages,
@@ -89,6 +102,53 @@ export function markVoiceUnavailable(state) {
   };
 }
 
+const voicePhases = ['listening', 'transcribing', 'transcriptionConfirm'];
+
+export function beginListening(state) {
+  if (state.phase === 'sending' || voicePhases.includes(state.phase)) {
+    return state;
+  }
+  return {
+    ...state,
+    phase: 'listening',
+    notice: null,
+    pendingTranscription: null,
+  };
+}
+
+export function finishListening(state, rawText) {
+  if (state.phase !== 'listening') {
+    return state;
+  }
+  const text = String(rawText ?? '').trim();
+  if (!text) {
+    return {
+      ...state,
+      phase: 'idle',
+      notice: 'voiceUnavailable',
+      pendingTranscription: null,
+    };
+  }
+  return {
+    ...state,
+    phase: 'transcriptionConfirm',
+    pendingTranscription: text,
+    notice: null,
+  };
+}
+
+export function cancelVoice(state) {
+  if (!voicePhases.includes(state.phase)) {
+    return state;
+  }
+  return {
+    ...state,
+    phase: 'idle',
+    pendingTranscription: null,
+    notice: null,
+  };
+}
+
 export function stageTranscription(state, rawText) {
   const text = String(rawText ?? '').trim();
   if (!text || state.phase === 'sending') {
@@ -103,14 +163,7 @@ export function stageTranscription(state, rawText) {
 }
 
 export function cancelTranscription(state) {
-  if (state.phase !== 'transcriptionConfirm') {
-    return state;
-  }
-  return {
-    ...state,
-    phase: 'idle',
-    pendingTranscription: null,
-  };
+  return cancelVoice(state);
 }
 
 function applyResult(state, result) {
