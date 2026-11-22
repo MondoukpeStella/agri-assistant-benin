@@ -43,10 +43,25 @@ Réduire le manque d'information sur les prix agricoles en donnant accès à une
 - Hors du sujet des prix du maïs et du riz, rediriger poliment la conversation.
 - Aucune nouvelle consultation de prix hors connexion ; seul l'historique local reste consultable.
 
+## Application mobile
+
+Le socle Android est dans [`mobile/`](mobile/README.md). Il affiche un écran technique de démarrage et ne consulte aucun prix. Prérequis, installation et lancement avec Expo Go : voir ce README.
+
 ## Documentation
 
 - [Périmètre produit et décisions du MVP](docs/PRODUCT_SCOPE.md)
 - [Modèle de description des issues](docs/ISSUE_TEMPLATE.md)
+- [Décision : socle mobile Expo](docs/decisions/ADR-001-mobile-expo-foundation.md)
+
+## Contrôles locaux
+
+Les secrets sont refusés avant commit par [Gitleaks](https://github.com/gitleaks/gitleaks) 8.30.1 et par `scripts/check-sensitive-files.sh`. Le programme [pre-commit](https://pre-commit.com/) s'installe en dehors du dépôt, par exemple avec `pipx install pre-commit`. Le hook s'active ensuite avec :
+
+```bash
+pre-commit install
+```
+
+La CI mobile est décrite dans `.github/workflows/mobile.yml`.
 
 ## État du projet
 

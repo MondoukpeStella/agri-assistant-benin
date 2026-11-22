@@ -1,0 +1,46 @@
+# Local working files. init.md is the developer handoff and stays off the remote.
+.local/
+init.md
+
+# Secrets and environment
+.env
+.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.jks
+*.p12
+*.p8
+*.mobileprovision
+*.orig.*
+credentials.json
+
+# Logs and local databases
+*.log
+*.sqlite
+*.sqlite3
+*.db
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# OS
+.DS_Store
+
+# Python local environments
+__pycache__/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Mobile
+mobile/node_modules/
+mobile/.expo/
+mobile/dist/
+mobile/web-build/
+mobile/coverage/
+mobile/ios/
+mobile/android/
