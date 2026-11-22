@@ -59,6 +59,10 @@ La documentation interactive est disponible en `development` et `test` sur `/doc
 
 `POST /api/v1/probe` accepte un objet JSON `{"message":"..."}` afin de vérifier la validation des requêtes. Cette route ne consulte pas de prix.
 
+## Observation de prix
+
+Le modèle interne vit dans `app/domain/price_observation.py`. `app/services/supplier_mapping.py` traduit un enregistrement déjà exprimé dans les jetons de l'application (`maize`, `rice`, `natitingou`, `savalou`). Ces jetons ne sont pas les champs AgroFlux. Aucune route ne renvoie encore un prix. La décision est dans [`docs/decisions/ADR-004-price-observation-model.md`](../docs/decisions/ADR-004-price-observation-model.md).
+
 ## Vérifications
 
 ```bash
