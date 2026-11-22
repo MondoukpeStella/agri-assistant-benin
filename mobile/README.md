@@ -1,8 +1,8 @@
 # Application mobile
 
-Socle Android du MVP, en React Native et JavaScript, avec Expo SDK 58. Cet écran est technique : il confirme que l'application démarre. Il ne consulte pas de prix et n'affiche aucun montant.
+Application Android du MVP, en React Native et JavaScript, avec Expo SDK 58. L'écran suit la maquette : Démarrer, choix de la langue, introduction, puis conversation. Aucun prix n'est consulté tant que l'écran n'est pas relié au backend.
 
-La décision de structure est enregistrée dans [`docs/decisions/ADR-001-mobile-expo-foundation.md`](../docs/decisions/ADR-001-mobile-expo-foundation.md).
+Les décisions sont enregistrées dans [`docs/decisions/ADR-001-mobile-expo-foundation.md`](../docs/decisions/ADR-001-mobile-expo-foundation.md) et [`docs/decisions/ADR-003-mobile-conversation-entry.md`](../docs/decisions/ADR-003-mobile-conversation-entry.md).
 
 ## Prérequis
 
@@ -37,13 +37,13 @@ Expo affiche un QR code.
 
 1. Ouvrir Expo Go sur le téléphone Android.
 2. Scanner le QR code.
-3. L'écran « Assistant agricole » s'affiche, avec le texte indiquant qu'aucun prix n'est consulté.
+3. Appuyer sur Démarrer. L'écran de langue s'ouvre, avec la langue déjà mémorisée présélectionnée. Choisir Français ou Fon, puis Continuer. Une nouvelle langue passe par l'introduction ; la même langue ouvre la conversation, sans montant. L'engrenage dans l'en-tête ouvre Réglages : l'historique ou le changement de langue.
 
 Le rechargement après une modification d'interface se fait dans le terminal Expo avec la touche `r`, ou par le menu de développement d'Expo Go.
 
 ## Variables d'environnement
 
-Aucune variable n'est obligatoire. Sans fichier `.env`, l'écran affiche `Configuration : development`.
+Aucune variable n'est obligatoire. Sans fichier `.env`, l'application ouvre l'écran Démarrer.
 
 Pour nommer explicitement l'environnement local :
 
@@ -73,13 +73,16 @@ mobile/
 ├── App.js
 ├── index.js
 ├── src/
+│   ├── components/
 │   ├── constants/
 │   ├── navigation/
-│   └── screens/
+│   ├── screens/
+│   ├── services/
+│   └── storage/
 └── tests/
 ```
 
-`RootNavigator` affiche directement l'écran technique. Aucune bibliothèque de navigation n'est installée. Les dossiers `components`, `services`, `storage`, `hooks` et `utils` seront ajoutés lorsqu'une issue en aura l'usage.
+`RootNavigator` enchaîne le choix de langue, l'introduction et la conversation. Aucune bibliothèque de navigation n'est installée. La langue choisie est mémorisée localement. Les dossiers `hooks` et `utils` seront ajoutés lorsqu'une issue en aura l'usage.
 
 ## Vérifications
 
@@ -132,7 +135,7 @@ npx expo start --port 8082
 
 ### Fichier `.env` absent
 
-Le démarrage reste possible. L'écran affiche la configuration `development`.
+Le démarrage reste possible. L'application ouvre l'écran Démarrer.
 
 ### Secret ajouté par erreur
 
