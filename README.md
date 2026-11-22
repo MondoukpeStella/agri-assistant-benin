@@ -49,7 +49,7 @@ Le socle FastAPI est dans [`backend/`](backend/README.md). `GET /health` confirm
 
 ## Application mobile
 
-Le socle Android est dans [`mobile/`](mobile/README.md). Il affiche un écran technique de démarrage et ne consulte aucun prix. Prérequis, installation et lancement avec Expo Go : voir ce README.
+L'application Android est dans [`mobile/`](mobile/README.md). Le premier écran demande la langue, puis ouvre la conversation. Aucun prix n'est encore consulté. Prérequis, installation et lancement avec Expo Go : voir ce README.
 
 ## Documentation
 
@@ -57,6 +57,7 @@ Le socle Android est dans [`mobile/`](mobile/README.md). Il affiche un écran te
 - [Modèle de description des issues](docs/ISSUE_TEMPLATE.md)
 - [Décision : socle mobile Expo](docs/decisions/ADR-001-mobile-expo-foundation.md)
 - [Décision : socle backend FastAPI](docs/decisions/ADR-002-backend-foundation.md)
+- [Décision : entrée dans la conversation mobile](docs/decisions/ADR-003-mobile-conversation-entry.md)
 
 ## Contrôles locaux
 
