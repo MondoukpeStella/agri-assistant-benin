@@ -11,6 +11,7 @@
     },
     "android": {
       "package": "bj.agri.assistant",
+      "softwareKeyboardLayoutMode": "resize",
       "adaptiveIcon": {
         "backgroundColor": "#087A3D",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -20,6 +21,14 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "L'assistant utilise le micro pour comprendre votre question en français."
+        }
+      ]
+    ]
   }
 }

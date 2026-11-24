@@ -6,6 +6,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 AppEnv = Literal["development", "test", "production"]
 LogLevel = Literal["DEBUG", "INFO", "WARNING", "ERROR"]
+FrenchLlm = Literal["off", "qwen"]
 
 
 class Settings(BaseSettings):
@@ -17,6 +18,7 @@ class Settings(BaseSettings):
     app_env: AppEnv
     log_level: LogLevel = "INFO"
     cors_origins: str = Field(default="")
+    french_llm: FrenchLlm = "off"
 
     @field_validator("cors_origins")
     @classmethod

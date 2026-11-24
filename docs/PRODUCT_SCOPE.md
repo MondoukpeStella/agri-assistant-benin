@@ -74,7 +74,7 @@ Cette politique est provisoire et doit être confirmée avec les contraintes ré
 - Réponse affichée en français et, en mode vocal, lue à haute voix.
 
 ### Fon
-- Entrée et sortie vocales uniquement ; pas de texte en fon.
+- Entrée et sortie vocales uniquement. L'écran explique en français comment utiliser le mode. Aucune phrase en fon n'est écrite.
 - Chaîne prévue : audio fon → reconnaissance vocale et traduction vers le français → extraction du produit et du marché → recherche backend → réponse française → traduction vers le fon → synthèse vocale fon.
 - En cas de transcription incertaine, demander une confirmation courte.
 - La faisabilité et la qualité STT/TTS en fon constituent un risque technique majeur à tester tôt avec des locuteurs natifs.

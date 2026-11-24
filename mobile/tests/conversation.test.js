@@ -2,12 +2,16 @@ import {
   applyDraftChange,
   beginListening,
   beginSend,
+  beginTranscribing,
   canShowPrice,
   cancelVoice,
+  completeVoiceQuestion,
   createConversation,
   finishListening,
+  revealTranscript,
   submitText,
 } from '../src/services/conversation';
+import { COPY } from '../src/constants/copy';
 
 const validPrice = {
   validated: true,
@@ -64,6 +68,27 @@ describe('conversation state', () => {
     expect(empty.pendingTranscription).toBeNull();
     expect(heard.phase).toBe('transcriptionConfirm');
     expect(heard.pendingTranscription).toBe('Prix du riz à Savalou');
+  });
+
+  test('shows the heard question before the answer', () => {
+    const listening = beginListening(createConversation());
+    const waiting = beginTranscribing(listening);
+    const revealed = revealTranscript(waiting, 'Prix du maïs à Natitingou');
+    const answered = completeVoiceQuestion(
+      revealed,
+      'Prix du maïs à Natitingou',
+      {
+        kind: 'noValidatedData',
+        speak: true,
+      },
+    );
+
+    expect(revealed.messages).toHaveLength(1);
+    expect(revealed.messages[0].role).toBe('user');
+    expect(revealed.messages[0].text).toBe('Prix du maïs à Natitingou');
+    expect(answered.messages).toHaveLength(2);
+    expect(answered.messages[1].text).toBe(COPY.noValidated);
+    expect(JSON.stringify(answered)).not.toMatch(/250|FCFA/);
   });
 
   test('keeps the draft when the network fails and does not add a price', () => {

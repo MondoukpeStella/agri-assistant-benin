@@ -1,7 +1,14 @@
+import {
+  RecordingPresets,
+  setAudioModeAsync,
+  useAudioPlayer,
+  useAudioRecorder,
+} from 'expo-audio';
 import { StatusBar } from 'expo-status-bar';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   Image,
+  Keyboard,
   KeyboardAvoidingView,
   Platform,
   Pressable,
@@ -21,23 +28,151 @@ import {
   applyDraftChange,
   beginListening,
   beginSend,
+  beginTranscribing,
   cancelVoice,
   completeSend,
+  completeVoiceQuestion,
   createConversation,
+  revealTranscript,
   failSend,
   finishListening,
 } from '../services/conversation';
-import { requestPriceConsultation } from '../services/conversationClient';
+import {
+  requestFrenchAnswer,
+  requestPriceConsultation,
+} from '../services/conversationClient';
+import {
+  startFrenchRecording,
+  stopFrenchRecording,
+} from '../services/frenchRecorder';
+import {
+  answerFrenchLocally,
+  speakFrench,
+  speechFor,
+} from '../services/frenchSpeech';
+import { publishedObservations } from '../services/publishedPrices';
 import { useScreenInsets } from '../layout/useScreenInsets';
 import SettingsPanel, { LanguageSettings } from './SettingsPanel';
 import VoicePanel from './VoicePanel';
 
-async function defaultResult() {
+async function defaultResult(text, language, priorMessages = []) {
+  if (language === 'fr') {
+    const local = answerFrenchLocally(text, priorMessages);
+    if (local?.status === 'published_price') {
+      return mapFrenchVoice(local);
+    }
+    const voice = (await requestFrenchAnswer(text)) || local;
+    if (voice) {
+      return mapFrenchVoice(voice);
+    }
+  }
   const result = await requestPriceConsultation();
   if (result?.type === 'not_connected') {
     return { kind: 'unavailable' };
   }
   return result?.kind ? result : { kind: 'unavailable' };
+}
+
+const VOICE_WAIT_MS = 700;
+const SEARCH_WAIT_MS = 1400;
+const KEYBOARD_EXTRA = 48;
+
+function waitAtLeast(startedAt, minimum) {
+  const remaining = minimum - (Date.now() - startedAt);
+  if (remaining <= 0) {
+    return Promise.resolve();
+  }
+  return new Promise((resolve) => {
+    setTimeout(resolve, remaining);
+  });
+}
+
+function FonStage({ onStartVoice }) {
+  const player = useAudioPlayer(require('../../assets/fon/instructions.mp4'));
+
+  useEffect(() => {
+    let active = true;
+    void setAudioModeAsync({
+      allowsRecording: false,
+      playsInSilentMode: true,
+    })
+      .then(() => {
+        if (active) {
+          player.play();
+        }
+      })
+      .catch(() => {});
+    return () => {
+      active = false;
+      player.pause();
+    };
+  }, [player]);
+
+  return (
+    <View style={styles.voiceStage}>
+      <Text accessibilityRole="header" style={styles.fonTitle}>
+        {COPY.fonGuideTitle}
+      </Text>
+      <Text style={styles.fonGuide}>{COPY.fonGuideStep1}</Text>
+      <Text style={styles.fonGuide}>{COPY.fonGuideStep2}</Text>
+      <Text style={styles.fonGuide}>{COPY.fonGuideStep3}</Text>
+      <Text style={styles.fonLimit}>{COPY.fonGuideLimit}</Text>
+      <Pressable
+        accessibilityRole="button"
+        onPress={() => {
+          void player.seekTo(0).then(() => {
+            player.play();
+          });
+        }}
+        style={styles.fonListen}
+        testID="fon-intro-button"
+      >
+        <Text style={styles.fonListenText}>{COPY.fonListen}</Text>
+      </Pressable>
+      <View style={styles.voiceHalo}>
+        <Pressable
+          accessibilityLabel={COPY.voice}
+          accessibilityRole="button"
+          onPress={() => {
+            player.pause();
+            onStartVoice();
+          }}
+          style={styles.voiceMic}
+          testID="voice-button"
+        >
+          <View style={styles.voiceIcon}>
+            <MicIcon />
+          </View>
+        </Pressable>
+      </View>
+    </View>
+  );
+}
+
+function mapFrenchVoice(voice) {
+  if (voice.status === 'published_price') {
+    return {
+      kind: 'publishedPrice',
+      text: voice.reply,
+      observations: publishedObservations(voice.product, voice.market),
+      speak: true,
+    };
+  }
+  if (voice.status === 'no_validated_price') {
+    return { kind: 'noValidatedData', speak: true };
+  }
+  if (voice.status === 'uncovered_market') {
+    return { kind: 'marketUncovered', text: voice.reply, speak: true };
+  }
+  if (
+    voice.status === 'clarification' ||
+    voice.status === 'unsupported_product' ||
+    voice.status === 'not_understood' ||
+    voice.status === 'recognition_unavailable'
+  ) {
+    return { kind: 'clarification', text: voice.reply, speak: true };
+  }
+  return { kind: 'unavailable' };
 }
 
 export default function ConversationScreen({
@@ -54,7 +189,24 @@ export default function ConversationScreen({
   const insets = useScreenInsets();
   const [panel, setPanel] = useState(null);
   const sendingRef = useRef(state.phase === 'sending');
+  const recordingAttempt = useRef(0);
+  const recorder = useAudioRecorder(RecordingPresets.HIGH_QUALITY);
+  const [keyboardHeight, setKeyboardHeight] = useState(0);
+
+  useEffect(() => {
+    const show = Keyboard.addListener('keyboardDidShow', (event) => {
+      setKeyboardHeight(event.endCoordinates?.height ?? 0);
+    });
+    const hide = Keyboard.addListener('keyboardDidHide', () => {
+      setKeyboardHeight(0);
+    });
+    return () => {
+      show.remove();
+      hide.remove();
+    };
+  }, []);
   const sending = state.phase === 'sending';
+  const answering = state.phase === 'answering';
   const voiceOpen =
     state.phase === 'listening' ||
     state.phase === 'transcribing' ||
@@ -67,6 +219,11 @@ export default function ConversationScreen({
         return;
       }
     }
+    if (nextLanguage !== language) {
+      recordingAttempt.current += 1;
+      void recorder.stop().catch(() => {});
+      setState(createConversation());
+    }
     setLanguage(nextLanguage);
     setPanel(null);
   }
@@ -78,18 +235,76 @@ export default function ConversationScreen({
   }
 
   function startVoice() {
+    const attempt = recordingAttempt.current + 1;
+    recordingAttempt.current = attempt;
     setState((current) => beginListening(current));
+    if (language !== 'fr' || onStageTranscription) {
+      return;
+    }
+    void startFrenchRecording(recorder).then((started) => {
+      if (started && recordingAttempt.current !== attempt) {
+        void recorder.stop().catch(() => {});
+      }
+    });
   }
 
-  async function submit(rawText) {
+  async function stopVoice() {
+    const attempt = recordingAttempt.current + 1;
+    recordingAttempt.current = attempt;
+    const startedAt = Date.now();
+    setState((current) => beginTranscribing(current));
+    let text = '';
+    if (onStageTranscription) {
+      text = onStageTranscription();
+    } else if (language === 'fr') {
+      text = await stopFrenchRecording(recorder);
+    }
+    await waitAtLeast(startedAt, VOICE_WAIT_MS);
+    if (recordingAttempt.current !== attempt) {
+      return;
+    }
+    if (onStageTranscription || language !== 'fr') {
+      setState((current) => finishListening(current, text));
+      return;
+    }
+    const heard = String(text || '').trim();
+    if (heard) {
+      setState((current) => revealTranscript(current, heard));
+      await waitAtLeast(Date.now(), SEARCH_WAIT_MS);
+    }
+    if (recordingAttempt.current !== attempt) {
+      return;
+    }
+    const result = heard
+      ? await Promise.resolve(resolveResult(heard, language, state.messages))
+      : mapFrenchVoice({
+          status: 'not_understood',
+          reply: COPY.notUnderstood,
+        });
+    if (recordingAttempt.current !== attempt) {
+      return;
+    }
+    setState((current) =>
+      completeVoiceQuestion(current, heard, result ?? { kind: 'unavailable' }),
+    );
+    if (result?.kind !== 'networkError') {
+      speakFrench(result, language);
+    }
+  }
+
+  async function submit(rawText, { speak = false } = {}) {
     const text = String(rawText ?? state.draft ?? '').trim();
     if (!text || sendingRef.current || state.phase === 'sending') {
       return;
     }
     sendingRef.current = true;
+    const startedAt = Date.now();
     setState((current) => beginSend(current, text));
     try {
-      const result = await Promise.resolve(resolveResult(text));
+      const result = await Promise.resolve(
+        resolveResult(text, language, state.messages),
+      );
+      await waitAtLeast(startedAt, SEARCH_WAIT_MS);
       setState((current) => {
         const started =
           current.phase === 'sending' ? current : beginSend(current, text);
@@ -100,6 +315,9 @@ export default function ConversationScreen({
           ? failSend(started)
           : completeSend(started, result);
       });
+      if (speak && result?.kind !== 'networkError') {
+        speakFrench(result, language);
+      }
     } finally {
       sendingRef.current = false;
     }
@@ -133,16 +351,15 @@ export default function ConversationScreen({
       <View style={styles.container} testID="conversation-screen">
         <StatusBar style="dark" />
         <VoicePanel
-          onCancel={() => setState((current) => cancelVoice(current))}
-          onConfirm={() => submit(state.pendingTranscription)}
-          onStop={() =>
-            setState((current) =>
-              finishListening(
-                current,
-                onStageTranscription ? onStageTranscription() : '',
-              ),
-            )
-          }
+          onCancel={() => {
+            recordingAttempt.current += 1;
+            void recorder.stop().catch(() => {});
+            setState((current) => cancelVoice(current));
+          }}
+          onConfirm={() => submit(state.pendingTranscription, { speak: true })}
+          onStop={() => {
+            void stopVoice();
+          }}
           phase={state.phase}
           transcript={state.pendingTranscription}
         />
@@ -153,7 +370,16 @@ export default function ConversationScreen({
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-      style={styles.container}
+      style={[
+        styles.container,
+        keyboardHeight
+          ? {
+              paddingBottom:
+                (Platform.OS === 'android' ? keyboardHeight : 0) +
+                KEYBOARD_EXTRA,
+            }
+          : null,
+      ]}
       testID="conversation-screen"
     >
       <StatusBar style="light" />
@@ -239,16 +465,35 @@ export default function ConversationScreen({
             ) : null}
             <MessageList
               messages={visibleMessages}
-              onListen={() =>
-                setState((current) =>
-                  current.notice === 'listenUnavailable'
-                    ? current
-                    : { ...current, notice: 'listenUnavailable' },
-                )
-              }
+              onListen={() => {
+                const currentPrice = [...visibleMessages]
+                  .reverse()
+                  .find(
+                    (message) =>
+                      message.kind === 'price' && !message.historical,
+                  );
+                const spoken = speechFor(
+                  { kind: 'price', price: currentPrice?.price, speak: true },
+                  language,
+                );
+                if (!spoken) {
+                  setState((current) =>
+                    current.notice === 'listenUnavailable'
+                      ? current
+                      : { ...current, notice: 'listenUnavailable' },
+                  );
+                  return;
+                }
+                speakFrench(
+                  { kind: 'price', price: currentPrice.price, speak: true },
+                  language,
+                );
+              }}
             />
-            {sending ? (
-              <Text style={styles.loading}>{COPY.loading}</Text>
+            {sending || answering ? (
+              <View style={styles.assistantBubble} testID="price-search">
+                <Text style={styles.assistantText}>{COPY.loading}</Text>
+              </View>
             ) : null}
             {state.notice === 'network' ? (
               <Text style={styles.error}>{COPY.network}</Text>
@@ -291,28 +536,19 @@ export default function ConversationScreen({
                 <Text style={styles.retry}>{COPY.retry}</Text>
               </Pressable>
             ) : null}
-            {language === 'fon' ? (
-              <View style={styles.voiceStage}>
-                <View style={styles.voiceHalo}>
-                  <Pressable
-                    accessibilityLabel={COPY.voice}
-                    accessibilityRole="button"
-                    onPress={startVoice}
-                    style={styles.voiceMic}
-                    testID="voice-button"
-                  >
-                    <View style={styles.voiceIcon}>
-                      <MicIcon />
-                    </View>
-                  </Pressable>
-                </View>
-              </View>
-            ) : null}
+            {language === 'fon' ? <FonStage onStartVoice={startVoice} /> : null}
           </>
         )}
       </ScrollView>
       {panel || language !== 'fr' ? null : (
-        <View style={[styles.footer, { paddingBottom: insets.paddingBottom }]}>
+        <View
+          style={[
+            styles.footer,
+            {
+              paddingBottom: keyboardHeight > 0 ? 20 : insets.paddingBottom,
+            },
+          ]}
+        >
           <Composer
             draft={state.draft}
             draftGeneration={state.draftGeneration}
@@ -415,12 +651,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 22,
   },
-  loading: {
-    color: colors.muted,
-    fontSize: 16,
-    lineHeight: 22,
-    marginBottom: 8,
-  },
   error: {
     backgroundColor: colors.error,
     borderRadius: 16,
@@ -479,7 +709,41 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexGrow: 1,
     justifyContent: 'center',
-    paddingTop: 24,
+    paddingTop: 12,
+  },
+  fonTitle: {
+    color: colors.text,
+    fontSize: 22,
+    fontWeight: '700',
+    marginBottom: 12,
+    textAlign: 'center',
+  },
+  fonGuide: {
+    color: colors.text,
+    fontSize: 16,
+    lineHeight: 22,
+    marginBottom: 8,
+    textAlign: 'center',
+  },
+  fonLimit: {
+    color: colors.muted,
+    fontSize: 15,
+    lineHeight: 21,
+    marginBottom: 16,
+    textAlign: 'center',
+  },
+  fonListen: {
+    borderColor: colors.primary,
+    borderRadius: 20,
+    borderWidth: 1,
+    marginBottom: 28,
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+  },
+  fonListenText: {
+    color: colors.primary,
+    fontSize: 16,
+    fontWeight: '700',
   },
   voiceHalo: {
     alignItems: 'center',

@@ -5,6 +5,26 @@ import { colors } from '../constants/theme';
 import { canShowPrice } from '../services/conversation';
 import { SpeakerIcon } from './icons';
 
+export function PublishedPriceCard({ observation }) {
+  return (
+    <View style={styles.card} testID="published-price">
+      <Text style={styles.subject}>
+        {observation.label} · {observation.market}
+      </Text>
+      <Text style={styles.amountLine}>
+        <Text style={styles.amount}>{observation.amount}</Text>
+        <Text style={styles.unit}>
+          {' '}
+          {observation.currency}/{observation.unit}
+        </Text>
+      </Text>
+      <Text style={styles.date}>
+        {COPY.collectedOn} {observation.collectedOn}
+      </Text>
+    </View>
+  );
+}
+
 export default function PriceCard({ price, historical = false, onListen }) {
   if (!canShowPrice(price)) {
     return null;

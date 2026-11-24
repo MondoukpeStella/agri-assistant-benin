@@ -1,4 +1,12 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { useEffect, useState } from 'react';
+import {
+  Animated,
+  Easing,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 
 import { MicIcon } from '../components/icons';
 import { COPY } from '../constants/copy';
@@ -39,12 +47,16 @@ export default function VoicePanel({
         {title}
       </Text>
       <View style={styles.center}>
-        <View
-          style={[
-            styles.halo,
-            listening ? styles.haloListening : styles.haloCalm,
-          ]}
-        >
+        <View style={styles.stage}>
+          {listening || processing ? (
+            <>
+              <HaloRing delay={0} />
+              <HaloRing delay={500} />
+              <HaloRing delay={1000} />
+            </>
+          ) : (
+            <View style={styles.haloCalm} />
+          )}
           {listening ? (
             <Pressable
               accessibilityLabel={COPY.voiceStop}
@@ -98,6 +110,48 @@ export default function VoicePanel({
   );
 }
 
+function HaloRing({ delay }) {
+  const [progress] = useState(() => new Animated.Value(0));
+
+  useEffect(() => {
+    const animation = Animated.loop(
+      Animated.sequence([
+        Animated.delay(delay),
+        Animated.timing(progress, {
+          toValue: 1,
+          duration: 1800,
+          easing: Easing.out(Easing.ease),
+          useNativeDriver: true,
+        }),
+        Animated.timing(progress, {
+          toValue: 0,
+          duration: 0,
+          useNativeDriver: true,
+        }),
+      ]),
+    );
+    animation.start();
+    return () => animation.stop();
+  }, [delay, progress]);
+
+  const scale = progress.interpolate({
+    inputRange: [0, 1],
+    outputRange: [1, 1.75],
+  });
+  const opacity = progress.interpolate({
+    inputRange: [0, 0.15, 1],
+    outputRange: [0.15, 0.55, 0],
+  });
+
+  return (
+    <Animated.View
+      pointerEvents="none"
+      style={[styles.halo, { opacity, transform: [{ scale }] }]}
+      testID="mic-halo"
+    />
+  );
+}
+
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
@@ -114,18 +168,26 @@ const styles = StyleSheet.create({
   center: {
     alignItems: 'center',
   },
-  halo: {
+  stage: {
     alignItems: 'center',
-    borderRadius: 84,
-    height: 168,
+    height: 248,
     justifyContent: 'center',
-    width: 168,
+    width: 248,
   },
-  haloListening: {
-    backgroundColor: colors.error,
+  halo: {
+    borderColor: 'rgba(8, 122, 61, 0.45)',
+    borderRadius: 72,
+    borderWidth: 12,
+    height: 144,
+    position: 'absolute',
+    width: 144,
   },
   haloCalm: {
     backgroundColor: colors.mint,
+    borderRadius: 84,
+    height: 168,
+    position: 'absolute',
+    width: 168,
   },
   mic: {
     alignItems: 'center',
