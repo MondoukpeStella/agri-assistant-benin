@@ -113,19 +113,30 @@ describe('ConversationScreen', () => {
   });
 
   test('clears the conversation when the language changes', async () => {
+    const kept = [
+      {
+        id: 'old',
+        role: 'user',
+        kind: 'text',
+        text: SUGGESTION_MAIZE,
+        historical: true,
+        createdAt: '2026-11-01',
+        responseStatus: 'question',
+      },
+    ];
+    const store = {
+      load: async () => ({ ok: true, messages: [...kept] }),
+      save: async () => ({ ok: true, saved: 0 }),
+      clear: async () => {
+        kept.length = 0;
+        return { ok: true };
+      },
+    };
     const screen = await render(
       <ConversationScreen
         language="fr"
-        initialState={createConversation([
-          {
-            id: 'old',
-            role: 'user',
-            kind: 'text',
-            text: SUGGESTION_MAIZE,
-            historical: true,
-            createdAt: '2026-11-01',
-          },
-        ])}
+        historyStore={store}
+        initialState={createConversation([...kept])}
         onChangeLanguage={async () => true}
       />,
     );
@@ -138,6 +149,9 @@ describe('ConversationScreen', () => {
     await user.press(screen.getByTestId('settings-save'));
 
     expect(screen.queryByText(SUGGESTION_MAIZE)).toBeNull();
+    await waitFor(() => {
+      expect(kept).toHaveLength(0);
+    });
     await user.press(screen.getByTestId('settings-button'));
     await user.press(screen.getByTestId('open-history'));
     expect(screen.getByText(COPY.historyEmpty)).toBeTruthy();

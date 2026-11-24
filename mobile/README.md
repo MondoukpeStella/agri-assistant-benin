@@ -86,6 +86,12 @@ mobile/
 
 `RootNavigator` enchaîne le choix de langue, l'introduction et la conversation. Aucune bibliothèque de navigation n'est installée. La langue choisie est mémorisée localement. Les dossiers `hooks` et `utils` seront ajoutés lorsqu'une issue en aura l'usage.
 
+## Historique local
+
+Les consultations qui ont reçu une réponse sont enregistrées dans SQLite sur le téléphone, pendant 7 jours. L'engrenage ouvre Réglages, puis Historique des conversations. Un message relu porte la mention historique et sa date ; ce n'est pas un prix actualisé. Une demande sans connexion n'est pas enregistrée et ne produit pas de montant. La comparaison des 7 jours utilise l'horloge du téléphone. Si cette horloge est avancée, une conversation peut disparaître plus tôt. Un horodatage illisible n'est pas supprimé. Une base absente, par exemple après réinstallation, affiche un historique vide. Si le schéma local est plus récent que l'application, l'historique n'est pas effacé : l'écran indique qu'il n'est pas disponible.
+
+La décision est dans [`docs/decisions/ADR-006-local-conversation-history.md`](../docs/decisions/ADR-006-local-conversation-history.md).
+
 ## Vérifications
 
 ```bash

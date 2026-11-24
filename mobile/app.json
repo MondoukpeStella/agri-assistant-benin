@@ -28,7 +28,8 @@
         {
           "microphonePermission": "L'assistant utilise le micro pour comprendre votre question en français."
         }
-      ]
+      ],
+      "expo-sqlite"
     ]
   }
 }
