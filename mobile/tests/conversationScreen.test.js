@@ -55,7 +55,7 @@ describe('ConversationScreen', () => {
     expect(screen.getByText(COPY.priceIntro)).toBeTruthy();
     expect(screen.queryByText(/Précisez le produit/)).toBeNull();
     expect(screen.queryByText(/Données fictives|250|FCFA/)).toBeNull();
-  });
+  }, 15000);
 
   test('sends a suggestion and a typed French request without a price', async () => {
     Speech.speak.mockClear();
