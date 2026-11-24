@@ -60,6 +60,7 @@ def test_unhandled_exception_returns_a_generic_error_and_logs_the_detail(
 def test_production_hides_interactive_docs(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("APP_ENV", "production")
     monkeypatch.delenv("LOG_LEVEL", raising=False)
+    monkeypatch.delenv("DATABASE_URL", raising=False)
     from app.core.config import load_settings
 
     app = create_app(load_settings(env_file=None))
