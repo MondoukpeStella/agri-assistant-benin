@@ -38,12 +38,31 @@ def test_missing_optional_variable_uses_the_documented_default(
     monkeypatch.setenv("APP_ENV", "test")
     monkeypatch.delenv("LOG_LEVEL", raising=False)
     monkeypatch.delenv("CORS_ORIGINS", raising=False)
+    monkeypatch.delenv("DATABASE_URL", raising=False)
 
     settings = load_settings(env_file=None)
 
     assert settings.app_env == "test"
     assert settings.log_level == "INFO"
     assert settings.cors_origin_list == []
+    assert settings.database_url == ""
+
+
+def test_test_environment_rejects_the_development_database(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setenv("APP_ENV", "test")
+    monkeypatch.setenv(
+        "DATABASE_URL",
+        "postgresql+psycopg://agri:secret-dev@localhost:5432/agri_dev",
+    )
+
+    with pytest.raises(SystemExit) as caught:
+        load_settings(env_file=None)
+
+    message = str(caught.value)
+    assert "database_url" in message
+    assert "secret-dev" not in message
 
 
 def test_wildcard_cors_origin_is_rejected(monkeypatch: pytest.MonkeyPatch) -> None:

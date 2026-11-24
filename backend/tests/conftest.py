@@ -7,7 +7,7 @@ from app.main import create_app
 
 @pytest.fixture
 def settings() -> Settings:
-    return Settings(app_env="test", _env_file=None)
+    return Settings(app_env="test", database_url="", _env_file=None)
 
 
 @pytest.fixture

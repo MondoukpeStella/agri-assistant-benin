@@ -4,6 +4,8 @@ from typing import Literal
 from pydantic import Field, ValidationError, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+from app.core.database_url import normalize_database_url
+
 AppEnv = Literal["development", "test", "production"]
 LogLevel = Literal["DEBUG", "INFO", "WARNING", "ERROR"]
 
@@ -17,6 +19,12 @@ class Settings(BaseSettings):
     app_env: AppEnv
     log_level: LogLevel = "INFO"
     cors_origins: str = Field(default="")
+    database_url: str = ""
+
+    @field_validator("database_url")
+    @classmethod
+    def check_database_url(cls, value: str, info) -> str:
+        return normalize_database_url(info.data.get("app_env"), value)
 
     @field_validator("cors_origins")
     @classmethod
