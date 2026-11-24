@@ -4,8 +4,11 @@ version = "0.1.0"
 description = "API de consultation des prix agricoles pour le MVP Bénin"
 requires-python = ">=3.12,<3.13"
 dependencies = [
+  "alembic>=1.20.1",
   "fastapi>=0.115",
+  "psycopg[binary]>=3.3.9",
   "pydantic-settings>=2.6",
+  "sqlalchemy>=2.1.9",
   "uvicorn>=0.32",
 ]
 

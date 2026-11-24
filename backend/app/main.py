@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.api.database import router as database_router
 from app.api.health import router as health_router
 from app.api.v1.french_voice import router as french_voice_router
 from app.api.v1.probe import router as probe_router
@@ -34,6 +35,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         )
 
     app.include_router(health_router)
+    app.include_router(database_router)
     app.include_router(probe_router)
     app.include_router(french_voice_router)
     app.include_router(wfp_prices_router)
