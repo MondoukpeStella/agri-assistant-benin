@@ -66,6 +66,9 @@ export function createHistoryRepository(db) {
     save(turn, nowIso) {
       return exclusive(() => saveHistory(db, turn, nowIso));
     },
+    clear() {
+      return exclusive(() => clearHistory(db));
+    },
   };
 }
 
@@ -152,6 +155,19 @@ async function saveHistory(db, turn, nowIso) {
     return { ok: false, reason: reasonFor(error) };
   }
   return { ok: true, saved: messages.length };
+}
+
+async function clearHistory(db) {
+  const migrated = await migrate(db);
+  if (!migrated.ok) {
+    return migrated;
+  }
+  try {
+    await db.exec('DELETE FROM messages; DELETE FROM conversations;');
+  } catch (error) {
+    return { ok: false, reason: reasonFor(error) };
+  }
+  return { ok: true };
 }
 
 async function migrate(db) {

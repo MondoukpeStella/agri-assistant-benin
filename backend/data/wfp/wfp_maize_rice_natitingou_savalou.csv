@@ -1,0 +1,1043 @@
+date,market,market_id,commodity,commodity_id,unit,priceflag,pricetype,currency,price
+2014-07-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,151
+2014-07-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,443
+2014-08-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,144
+2014-08-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,507
+2014-09-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,130
+2014-09-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,135
+2014-09-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2014-09-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,80
+2014-09-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2014-10-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,118
+2014-10-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,135
+2014-10-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2014-10-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,100
+2014-10-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2014-11-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,129
+2014-11-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,135
+2014-11-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2014-11-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,100
+2014-11-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2014-12-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,136
+2014-12-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,314
+2015-01-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,135
+2015-01-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-01-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,165
+2015-01-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-02-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,135
+2015-02-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-02-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,165
+2015-02-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-03-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,135
+2015-03-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-03-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,165
+2015-03-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-04-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,128
+2015-04-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,135
+2015-04-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-04-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,165
+2015-04-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-05-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,148
+2015-05-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2015-05-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-05-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,125
+2015-05-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,445
+2015-06-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,157
+2015-06-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2015-06-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-06-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,245
+2015-06-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-07-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,172
+2015-07-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2015-07-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-07-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,245
+2015-07-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-08-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,169
+2015-08-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,190
+2015-08-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-08-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,260
+2015-08-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-09-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,184
+2015-09-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2015-09-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-09-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,215
+2015-09-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,585
+2015-10-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,182
+2015-10-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2015-10-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-10-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,215
+2015-10-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-11-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2015-11-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-11-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,165
+2015-11-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-12-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2015-12-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2015-12-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,205
+2015-12-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-01-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2016-01-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-01-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,205
+2016-01-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-02-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,135
+2016-02-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-02-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,165
+2016-02-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-03-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,184
+2016-03-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2016-03-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-03-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,205
+2016-03-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-04-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,210
+2016-04-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-04-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,275
+2016-04-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-05-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,205
+2016-05-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-05-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,205
+2016-05-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-06-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,200
+2016-06-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-06-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,245
+2016-06-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-07-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,190
+2016-07-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-07-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,205
+2016-07-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-08-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,190
+2016-08-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-08-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,165
+2016-08-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-09-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,190
+2016-09-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-09-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,165
+2016-09-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-10-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2016-10-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-10-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,165
+2016-10-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-11-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2016-11-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,530
+2016-11-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,165
+2016-11-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,530
+2018-05-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,175
+2018-05-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,417
+2018-07-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,153
+2018-07-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,367
+2018-08-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,155
+2018-08-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,475
+2018-09-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,182
+2018-09-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,465
+2018-10-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,175
+2018-10-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,500
+2018-11-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,156
+2018-11-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,500
+2018-12-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,146
+2018-12-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,500
+2019-01-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,142.5
+2019-01-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,137.36
+2019-01-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2019-01-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,332.45
+2019-02-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,130
+2019-02-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,137.36
+2019-02-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2019-02-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,319.15
+2019-03-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,140.75
+2019-03-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,137.36
+2019-03-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2019-03-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,319.15
+2019-04-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,145.25
+2019-04-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,137.36
+2019-04-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2019-04-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,319.15
+2019-05-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,151.5
+2019-05-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,514.75
+2019-06-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,152.5
+2019-06-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,516.75
+2019-07-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,161.25
+2019-07-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,520.25
+2019-07-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2019-07-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,131.15
+2019-07-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2019-07-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,319.15
+2019-08-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,154.25
+2019-08-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,517.25
+2019-08-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2019-08-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,135.25
+2019-08-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2019-08-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,372.34
+2019-09-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,130.5
+2019-09-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,516.5
+2019-09-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2019-09-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,90.16
+2019-09-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,574.47
+2019-09-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,446.81
+2019-10-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,128.5
+2019-10-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,504.5
+2019-10-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2019-10-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,101.09
+2019-10-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2019-10-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2019-11-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,148.25
+2019-11-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,507
+2019-12-15,Natitingou,1757,Maize,51,KG,actual,Retail,XOF,151.67
+2019-12-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,506.33
+2019-12-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,114.75
+2019-12-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,585.11
+2019-12-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-01-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,164.84
+2020-01-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-01-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2020-01-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,122.95
+2020-01-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,585.11
+2020-01-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-02-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,157.97
+2020-02-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-02-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2020-02-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,133.88
+2020-02-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-02-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-03-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,164.84
+2020-03-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-03-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2020-03-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,143.44
+2020-03-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-03-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-04-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,164.84
+2020-04-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-04-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2020-04-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,147.54
+2020-04-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-04-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-04-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,180
+2020-05-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,164.84
+2020-05-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-05-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2020-05-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,143.44
+2020-05-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-05-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-05-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,181.25
+2020-06-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,164.84
+2020-06-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-06-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2020-06-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,139.34
+2020-06-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-06-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-06-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,168.33
+2020-07-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,210.62
+2020-07-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-07-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,381.21
+2020-07-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,147.54
+2020-07-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-07-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-07-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,175
+2020-08-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2020-08-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-08-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-08-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,142.42
+2020-08-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-08-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-08-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,172.5
+2020-09-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2020-09-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-09-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-09-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,154.71
+2020-09-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-09-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-10-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,178.57
+2020-10-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-10-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,452.13
+2020-10-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,136.27
+2020-10-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-10-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-10-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,172.5
+2020-11-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,164.84
+2020-11-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-11-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2020-11-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,131.15
+2020-11-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-11-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-11-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,170
+2020-12-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,178.57
+2020-12-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-12-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2020-12-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,138.32
+2020-12-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2020-12-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2020-12-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,160
+2021-01-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,210.62
+2021-01-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-01-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2021-01-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,145.49
+2021-01-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-01-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2021-01-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,170
+2021-02-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2021-02-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-02-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372.34
+2021-02-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,153.69
+2021-02-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-02-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2021-02-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,172.5
+2021-03-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2021-03-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-03-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,407.8
+2021-03-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,200
+2021-03-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,163.93
+2021-03-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-03-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2021-03-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,150
+2021-04-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2021-04-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-04-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,428.86
+2021-04-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,200
+2021-04-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,168.03
+2021-04-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-04-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2021-05-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2021-05-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-05-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,452.13
+2021-05-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,205
+2021-05-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,177.25
+2021-05-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-05-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2021-06-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2021-06-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-06-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,478.72
+2021-06-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,205
+2021-06-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,189.89
+2021-06-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-06-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2021-07-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2021-07-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-07-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,478.72
+2021-07-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,208.57
+2021-07-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,175.2
+2021-07-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,585.11
+2021-07-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,505.32
+2021-07-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,180
+2021-08-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,255.1
+2021-08-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-08-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,425.53
+2021-08-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,150
+2021-08-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,168.03
+2021-08-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-08-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2021-09-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,274.73
+2021-09-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-09-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,425.53
+2021-09-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,141.67
+2021-09-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,153.69
+2021-09-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-09-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2021-10-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,172.68
+2021-10-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-10-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,398.94
+2021-10-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,122.86
+2021-10-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,163.93
+2021-10-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,505.32
+2021-10-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,452.13
+2021-10-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,170
+2021-11-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,192.31
+2021-11-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-11-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,379.94
+2021-11-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,119.29
+2021-11-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,147.54
+2021-11-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,425.53
+2021-11-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,531.91
+2021-11-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,170
+2021-12-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2021-12-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2021-12-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,406.53
+2021-12-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,162.14
+2021-12-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,186.48
+2021-12-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,505.32
+2021-12-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,452.13
+2021-12-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,167.5
+2022-01-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2022-01-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-01-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,421.1
+2022-01-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,164.17
+2022-01-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,189.89
+2022-01-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,460.99
+2022-01-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,460.99
+2022-01-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,173.33
+2022-02-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,226.65
+2022-02-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-02-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,398.94
+2022-02-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,142.5
+2022-02-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,194.67
+2022-02-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,425.53
+2022-02-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,531.91
+2022-02-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,180
+2022-04-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2022-04-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-04-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,407.8
+2022-04-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,156.67
+2022-04-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,191.26
+2022-04-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,514.18
+2022-04-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,602.84
+2022-05-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2022-05-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-05-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,432.18
+2022-05-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,161.25
+2022-05-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,206.97
+2022-05-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-05-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,585.11
+2022-06-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2022-06-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-06-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,447.7
+2022-06-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,188.33
+2022-06-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,195.36
+2022-06-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-06-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,567.38
+2022-07-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2022-07-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-07-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,478.72
+2022-07-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,215.56
+2022-07-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,184.43
+2022-07-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,514.18
+2022-07-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,460.99
+2022-07-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,200
+2022-08-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2022-08-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-08-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,478.72
+2022-08-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,228.13
+2022-08-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,195.7
+2022-08-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,545.21
+2022-08-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,518.62
+2022-09-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2022-09-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-09-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,478.72
+2022-09-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,200
+2022-09-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,187.5
+2022-09-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-09-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,452.13
+2022-10-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2022-10-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-10-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,458.78
+2022-10-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,187.5
+2022-10-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,184.43
+2022-10-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,545.21
+2022-10-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,452.13
+2022-10-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,180
+2022-11-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,164.84
+2022-11-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-11-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,425.53
+2022-11-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,150
+2022-11-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,180.33
+2022-11-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-11-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2022-11-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,177.5
+2022-12-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2022-12-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-12-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,478.72
+2022-12-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,250
+2022-12-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,180.33
+2022-12-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2022-12-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2022-12-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,168.33
+2023-01-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,245.05
+2023-01-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2023-01-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,398.94
+2023-01-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,200
+2023-01-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,198.09
+2023-01-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2023-01-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2023-01-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,186.67
+2023-02-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,247.25
+2023-02-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2023-02-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,478.72
+2023-02-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,222.5
+2023-02-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,251.64
+2023-02-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,553.19
+2023-02-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,489.36
+2023-02-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,190
+2023-03-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,214.29
+2023-03-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2023-03-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,478.72
+2023-03-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,213.33
+2023-03-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,250.82
+2023-03-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,542.55
+2023-03-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2023-03-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,200
+2023-04-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,214.29
+2023-04-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,236.26
+2023-04-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,478.72
+2023-04-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2023-04-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,425.53
+2023-04-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,478.72
+2023-04-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,240
+2023-04-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,214.14
+2023-04-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,179.3
+2023-04-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,518.62
+2023-04-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,611.7
+2023-04-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,452.13
+2023-04-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,378.99
+2023-04-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,190
+2023-05-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,219.78
+2023-05-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,247.25
+2023-05-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,478.72
+2023-05-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2023-05-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,452.13
+2023-05-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,478.72
+2023-05-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,220
+2023-05-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,202.19
+2023-05-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,170.77
+2023-05-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,585.11
+2023-05-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638.3
+2023-05-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,460.99
+2023-05-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,381.21
+2023-05-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,195
+2023-06-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,247.25
+2023-06-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,247.25
+2023-06-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,425.53
+2023-06-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2023-06-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,425.53
+2023-06-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,425.53
+2023-06-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,214.29
+2023-06-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,215.16
+2023-06-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,179.3
+2023-06-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,531.91
+2023-06-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638.3
+2023-06-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,418.88
+2023-06-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,392.29
+2023-06-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,185
+2023-07-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,247.25
+2023-07-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,247.25
+2023-07-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,425.53
+2023-07-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2023-07-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,425.53
+2023-07-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,425.53
+2023-07-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,223.33
+2023-07-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,204.92
+2023-07-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,184.43
+2023-07-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,531.91
+2023-07-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638.3
+2023-07-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2023-07-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,398.94
+2023-07-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,190
+2023-08-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,302.2
+2023-08-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,302.2
+2023-08-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,478.72
+2023-08-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2023-08-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,478.72
+2023-08-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,478.72
+2023-08-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,220
+2023-08-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,230.53
+2023-08-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,184.43
+2023-08-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,531.91
+2023-08-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638.3
+2023-08-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,425.53
+2023-08-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,398.94
+2023-08-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,225
+2023-09-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,334.38
+2023-09-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,334.38
+2023-09-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,478.72
+2023-09-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,531.91
+2023-09-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,478.72
+2023-09-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,478.72
+2023-09-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,220.86
+2023-09-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,235.66
+2023-09-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,189.55
+2023-09-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,425.53
+2023-09-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638.3
+2023-09-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,531.91
+2023-09-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,398.94
+2023-09-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,192.5
+2023-10-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,214.5
+2023-10-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,218.63
+2023-10-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,472.38
+2023-10-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,532
+2023-10-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,472.38
+2023-10-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,476.38
+2023-10-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,172.5
+2023-10-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,215.25
+2023-10-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,169
+2023-10-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2023-10-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638
+2023-10-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,532
+2023-10-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,399
+2023-10-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,153.33
+2023-11-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2023-11-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,220
+2023-11-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,452.5
+2023-11-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,532
+2023-11-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,452.5
+2023-11-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,452.5
+2023-11-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,128.75
+2023-11-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,198
+2023-11-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,164
+2023-11-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2023-11-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638
+2023-11-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,532
+2023-11-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,399
+2023-11-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,126.67
+2023-12-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2023-12-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,220
+2023-12-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2023-12-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,532
+2023-12-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,426
+2023-12-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,426
+2023-12-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,125
+2023-12-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,194.5
+2023-12-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,164
+2023-12-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,452.5
+2023-12-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638
+2023-12-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,532
+2023-12-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,399
+2023-12-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,150
+2024-01-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,230.25
+2024-01-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,230.25
+2024-01-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,409.13
+2024-01-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,598.25
+2024-01-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,409.13
+2024-01-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,409.13
+2024-01-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,203.75
+2024-01-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,184
+2024-01-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,159
+2024-01-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2024-01-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-01-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,532
+2024-01-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,399
+2024-01-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,147.5
+2024-02-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,275
+2024-02-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,275
+2024-02-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2024-02-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-02-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,426
+2024-02-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,426
+2024-02-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,200
+2024-02-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,194.5
+2024-02-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,164
+2024-02-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2024-02-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-02-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,532
+2024-02-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,399
+2024-02-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,165
+2024-03-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,311.67
+2024-03-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,311.67
+2024-03-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2024-03-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-03-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,426
+2024-03-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,426
+2024-03-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,235
+2024-03-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,205
+2024-03-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,174
+2024-03-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2024-03-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-03-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,532
+2024-03-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,399
+2024-03-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,191.25
+2024-04-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,330
+2024-04-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,330
+2024-04-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,479
+2024-04-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-04-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,479
+2024-04-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,479
+2024-04-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,214.38
+2024-04-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,259.67
+2024-04-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,191
+2024-04-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2024-04-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-04-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,532
+2024-04-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,399
+2024-04-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,206.67
+2024-05-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,330
+2024-05-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,330
+2024-05-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,461.33
+2024-05-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-05-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,461.33
+2024-05-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,461.33
+2024-05-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,223.33
+2024-05-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,322.75
+2024-05-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,235.75
+2024-05-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,412.5
+2024-05-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,664.75
+2024-05-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,545.25
+2024-05-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,412.5
+2024-05-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,211.25
+2024-06-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,323.13
+2024-06-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,323.13
+2024-06-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2024-06-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-06-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,426
+2024-06-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,426
+2024-06-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,225
+2024-06-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,314.33
+2024-06-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,239
+2024-06-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,443.67
+2024-06-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,655.67
+2024-06-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,567.33
+2024-06-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,417
+2024-06-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,200
+2024-07-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,316.25
+2024-07-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,316.25
+2024-07-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,452.5
+2024-07-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-07-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,452.5
+2024-07-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,452.5
+2024-07-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,230
+2024-07-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,287
+2024-07-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,184
+2024-07-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,479
+2024-07-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,673.33
+2024-07-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,549.67
+2024-07-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,408
+2024-07-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,250
+2024-08-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,306.43
+2024-08-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,306.43
+2024-08-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,479
+2024-08-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-08-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,479
+2024-08-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,479
+2024-08-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,230
+2024-08-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,246
+2024-08-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,169
+2024-08-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2024-08-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-08-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,532
+2024-08-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,439.25
+2024-08-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,248.75
+2024-09-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,275
+2024-09-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,275
+2024-09-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,498.88
+2024-09-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-09-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,512.13
+2024-09-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,505.5
+2024-09-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,231.25
+2024-09-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,246
+2024-09-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,170.67
+2024-09-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,461.33
+2024-09-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-09-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,532
+2024-09-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,479
+2024-09-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,225
+2024-10-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,268.13
+2024-10-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,261.13
+2024-10-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,518.75
+2024-10-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-10-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,565.13
+2024-10-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,249
+2024-10-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,199.75
+2024-10-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,139.5
+2024-10-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2024-10-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-10-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,452.5
+2024-10-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,225
+2024-11-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,227.86
+2024-11-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,227.86
+2024-11-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,433.57
+2024-11-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-11-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,486.57
+2024-11-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,532
+2024-11-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,234.14
+2024-11-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,205
+2024-11-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,164
+2024-11-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,532
+2024-11-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,664.75
+2024-11-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,611.5
+2024-11-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,505.5
+2024-11-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,182.5
+2024-12-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,222.25
+2024-12-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,220
+2024-12-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2024-12-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-12-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,487.83
+2024-12-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,532
+2024-12-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,233.5
+2024-12-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,203.25
+2024-12-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,160
+2024-12-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,439.25
+2024-12-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638
+2024-12-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,580.5
+2024-12-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,432.5
+2024-12-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,181
+2025-01-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2025-01-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,220
+2025-01-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,430.5
+2025-01-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2025-01-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,458.33
+2025-01-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,529
+2025-01-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,213.5
+2025-01-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,169
+2025-01-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,532
+2025-01-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,678
+2025-01-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,658.75
+2025-01-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,419.25
+2025-01-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,184
+2025-02-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2025-02-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,231.25
+2025-02-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2025-02-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2025-02-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,465.75
+2025-02-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,514.5
+2025-02-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,209.33
+2025-02-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,163.67
+2025-02-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,479
+2025-02-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,727
+2025-02-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,473.33
+2025-02-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,452.33
+2025-02-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,185
+2025-03-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2025-03-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,242.5
+2025-03-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2025-03-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2025-03-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,465.5
+2025-03-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,532
+2025-03-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,233.75
+2025-03-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,174
+2025-03-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,446.25
+2025-03-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,745
+2025-03-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,585
+2025-03-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,439.25
+2025-03-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,195
+2025-04-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2025-04-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,242.5
+2025-04-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2025-04-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2025-04-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,479
+2025-04-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,523
+2025-04-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,259.33
+2025-04-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,198
+2025-04-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,479
+2025-04-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,673.67
+2025-04-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,620.33
+2025-04-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,461.33
+2025-04-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,200
+2025-05-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2025-05-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,238
+2025-05-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2025-05-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2025-05-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,449.67
+2025-05-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,532
+2025-05-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,255.75
+2025-05-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,194.5
+2025-05-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,479
+2025-05-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,718.25
+2025-05-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,611.5
+2025-05-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,452.5
+2025-05-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,200
+2025-06-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2025-06-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,238
+2025-06-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2025-06-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2025-06-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,449.67
+2025-06-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,526
+2025-06-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,232
+2025-06-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,164
+2025-06-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,465.75
+2025-06-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,745
+2025-06-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,638
+2025-06-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,479
+2025-06-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,252
+2025-07-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2025-07-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,240.25
+2025-07-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2025-07-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2025-07-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,461
+2025-07-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,518.75
+2025-07-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,400
+2025-07-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,231
+2025-07-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,164.33
+2025-07-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,458.67
+2025-07-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,745
+2025-07-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,649.67
+2025-07-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,449.67
+2025-07-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,263.67
+2025-08-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,220
+2025-08-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,238
+2025-08-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2025-08-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,629
+2025-08-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,434.75
+2025-08-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,523
+2025-08-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,220
+2025-08-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,153.5
+2025-08-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2025-08-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,745
+2025-08-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,611.75
+2025-08-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,439.25
+2025-08-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,262.5
+2025-09-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,183.5
+2025-09-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,197
+2025-09-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2025-09-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,633.5
+2025-09-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,443.75
+2025-09-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,524
+2025-09-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,216.33
+2025-09-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,161.67
+2025-09-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,443.67
+2025-09-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,709.33
+2025-09-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,620.33
+2025-09-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,470
+2025-09-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,250
+2025-10-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2025-10-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,183.5
+2025-10-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,412.25
+2025-10-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2025-10-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,434.75
+2025-10-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,532
+2025-10-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,177.5
+2025-10-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,134.75
+2025-10-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,448
+2025-10-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,691.5
+2025-10-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,532
+2025-10-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,479
+2025-10-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,212.5
+2025-11-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2025-11-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,183
+2025-11-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,398.67
+2025-11-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2025-11-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,426
+2025-11-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,532
+2025-11-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,216
+2025-11-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,165
+2025-11-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,465.75
+2025-11-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,745
+2025-11-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,638
+2025-11-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,532
+2025-11-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,134
+2025-12-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,160.5
+2025-12-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,167.25
+2025-12-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,385.25
+2025-12-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2025-12-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,404.33
+2025-12-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,532
+2025-12-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,218.33
+2025-12-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,177.33
+2025-12-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,479
+2025-12-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,745
+2025-12-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,602.67
+2025-12-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,496.67
+2025-12-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,100
+2026-01-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2026-01-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,165
+2026-01-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,377.4
+2026-01-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2026-01-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,413.4
+2026-01-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,532
+2026-01-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,198
+2026-01-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,174
+2026-01-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,479
+2026-01-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,745
+2026-01-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,602.67
+2026-01-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,399
+2026-01-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,118.33
+2026-02-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2026-02-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,197
+2026-02-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,372
+2026-02-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2026-02-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,403.25
+2026-02-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,532
+2026-02-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,206.75
+2026-02-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,169.5
+2026-02-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,518.75
+2026-02-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,745
+2026-02-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,638
+2026-02-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,426
+2026-02-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,130
+2026-03-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2026-03-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,206
+2026-03-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,360.67
+2026-03-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2026-03-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,378.75
+2026-03-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,532
+2026-03-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,211.75
+2026-03-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,177.75
+2026-03-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,505.5
+2026-03-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,745
+2026-03-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,638
+2026-03-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,439.25
+2026-03-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,147.5
+2026-04-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2026-04-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,201.25
+2026-04-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,532
+2026-04-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2026-04-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,363.25
+2026-04-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,381
+2026-04-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,210
+2026-04-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,170.67
+2026-04-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,426
+2026-04-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,745
+2026-04-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,479
+2026-04-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,638
+2026-04-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,145.33
+2026-05-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,192.5
+2026-05-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,224
+2026-05-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,319
+2026-05-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2026-05-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,370
+2026-05-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,532
+2026-05-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,179
+2026-05-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,143.25
+2026-05-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,465.75
+2026-05-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,731.5
+2026-05-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,638
+2026-05-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,432.25
+2026-05-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,149.5
+2026-06-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2026-06-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,198
+2026-06-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,496.67
+2026-06-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2026-06-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,325
+2026-06-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,345.67
+2026-06-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,163.75
+2026-06-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,128
+2026-06-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,425.75
+2026-06-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,731
+2026-06-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,492.25
+2026-06-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,664.75
+2026-06-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,157.5
+2026-07-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2026-07-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,180.75
+2026-07-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,527.5
+2026-07-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,626
+2026-07-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,319
+2026-07-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,365.75
+2026-07-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,181
+2026-07-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,139.5
+2026-07-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,412.5
+2026-07-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,691.25
+2026-07-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,479
+2026-07-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,611.5
+2026-07-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,178.75
+2026-08-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2026-08-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,179
+2026-08-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,540.75
+2026-08-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2026-08-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,330.25
+2026-08-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,376.5
+2026-08-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,154.25
+2026-08-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,116
+2026-08-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,445.75
+2026-08-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,638
+2026-08-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,452.5
+2026-08-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,558.5
+2026-08-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,181.25
+2026-09-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2026-09-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,169.5
+2026-09-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,532
+2026-09-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2026-09-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,372
+2026-09-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,381
+2026-09-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,153.5
+2026-09-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,112.5
+2026-09-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,505.5
+2026-09-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,718.25
+2026-09-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,465.75
+2026-09-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,624.75
+2026-09-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,180
+2026-10-15,Natitingou,1757,Maize (white),67,KG,actual,Retail,XOF,165
+2026-10-15,Natitingou,1757,Maize (yellow),136,KG,actual,Retail,XOF,176.5
+2026-10-15,Natitingou,1757,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,532
+2026-10-15,Natitingou,1757,Rice (imported),64,KG,actual,Retail,XOF,638
+2026-10-15,Natitingou,1757,Rice (local),71,KG,actual,Retail,XOF,370
+2026-10-15,Natitingou,1757,"Rice (milled, local)",592,KG,actual,Retail,XOF,374.25
+2026-10-15,Natitingou,1757,Rice (paddy),203,KG,actual,Retail,XOF,300
+2026-10-15,Savalou,1759,Maize (white),67,KG,actual,Retail,XOF,164
+2026-10-15,Savalou,1759,Maize (yellow),136,KG,actual,Retail,XOF,123
+2026-10-15,Savalou,1759,"Rice (Broken, local)",1203,KG,actual,Retail,XOF,505.5
+2026-10-15,Savalou,1759,Rice (imported),64,KG,actual,Retail,XOF,718.25
+2026-10-15,Savalou,1759,Rice (local),71,KG,actual,Retail,XOF,452.5
+2026-10-15,Savalou,1759,"Rice (milled, local)",592,KG,actual,Retail,XOF,624.75
+2026-10-15,Savalou,1759,Rice (paddy),203,KG,actual,Retail,XOF,163.75

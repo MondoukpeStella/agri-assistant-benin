@@ -51,14 +51,24 @@ export const COPY = {
   historyClose: 'Retour',
   voiceListening: 'Je vous écoute…',
   voiceStop: 'Appuyez pour arrêter',
-  voiceProcessing: 'Traitement…',
-  voiceProcessingHint: 'Un instant',
+  voiceProcessing: 'Un instant…',
+  voiceProcessingHint: 'Je prépare la réponse.',
+  notUnderstood: "Je n'ai pas bien compris. Pouvez-vous répéter ?",
   voicePending: "L'entrée vocale n'est pas encore disponible.",
   priceIntro: 'Voici le prix :',
+  notCurrentPrice: "Ce n'est pas le prix du jour.",
   collectedOn: 'Date de collecte :',
   listen: 'Écouter la réponse',
   listenPending: "L'écoute de la réponse n'est pas encore disponible.",
   fonIntroLabel: 'Introduction vocale en attente de validation',
+  fonGuideTitle: 'Mode fon',
+  fonGuideStep1: '1. Appuyez sur le grand micro.',
+  fonGuideStep2: '2. Posez votre question à voix haute, en fon.',
+  fonGuideStep3:
+    '3. La réponse est parlée. Aucune phrase en fon n’est écrite ici.',
+  fonGuideLimit:
+    'La reconnaissance du fon n’est pas encore branchée. Elle attend une validation par des locuteurs natifs.',
+  fonListen: "Écouter l'introduction",
 };
 
 export const FON_SPEECH = {

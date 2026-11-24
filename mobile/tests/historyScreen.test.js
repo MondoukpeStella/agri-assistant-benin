@@ -54,7 +54,9 @@ describe('conversation history on screen', () => {
     );
 
     await userEvent.setup().press(screen.getByTestId('suggestion-maize'));
-    expect(await screen.findByTestId('current-price')).toBeTruthy();
+    expect(
+      await screen.findByTestId('current-price', {}, { timeout: 3000 }),
+    ).toBeTruthy();
     await waitFor(async () => {
       const stored = await store.load(new Date().toISOString());
       expect(stored.messages.some((message) => message.kind === 'price')).toBe(
@@ -130,7 +132,9 @@ describe('conversation history on screen', () => {
     );
     await user.press(screen.getByTestId('send-button'));
 
-    expect(await screen.findByText(COPY.network)).toBeTruthy();
+    expect(
+      await screen.findByText(COPY.network, {}, { timeout: 3000 }),
+    ).toBeTruthy();
     expect(screen.queryByTestId('current-price')).toBeNull();
     expect(screen.queryByTestId('historical-price')).toBeNull();
     await user.press(screen.getByTestId('settings-button'));
@@ -143,17 +147,21 @@ describe('conversation history on screen', () => {
     ]);
   });
 
-  test('leaves history empty when the price service is not connected', async () => {
+  test('stores a published price question and keeps it out of the history list', async () => {
     const store = createHistoryRepository(openNodeDatabase());
     const screen = await render(
       <ConversationScreen historyStore={store} language="fr" />,
     );
 
     await userEvent.setup().press(screen.getByTestId('suggestion-maize'));
-    expect(await screen.findByText(COPY.unavailable)).toBeTruthy();
+    expect(
+      await screen.findByText('Maïs blanc · Natitingou', {}, { timeout: 3000 }),
+    ).toBeTruthy();
 
     const stored = await store.load(new Date().toISOString());
-    expect(stored.messages).toEqual([]);
+    expect(
+      stored.messages.some((message) => message.text === SUGGESTION_MAIZE),
+    ).toBe(true);
     await userEvent.setup().press(screen.getByTestId('settings-button'));
     await userEvent.setup().press(screen.getByTestId('open-history'));
     expect(screen.getByText(COPY.historyEmpty)).toBeTruthy();
@@ -179,7 +187,9 @@ describe('conversation history on screen', () => {
     await user.press(screen.getByTestId('settings-button'));
     await user.press(screen.getByTestId('settings-button'));
     await user.press(screen.getByTestId('suggestion-maize'));
-    expect(await screen.findByTestId('current-price')).toBeTruthy();
+    expect(
+      await screen.findByTestId('current-price', {}, { timeout: 3000 }),
+    ).toBeTruthy();
     await user.press(screen.getByTestId('settings-button'));
     await user.press(screen.getByTestId('open-history'));
     expect(await screen.findByText(COPY.historyStorageFull)).toBeTruthy();

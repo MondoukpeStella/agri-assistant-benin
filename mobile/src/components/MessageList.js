@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { COPY } from '../constants/copy';
 import { colors } from '../constants/theme';
-import PriceCard from './PriceCard';
+import PriceCard, { PublishedPriceCard } from './PriceCard';
 
 export default function MessageList({ messages, onListen }) {
   return (
@@ -12,7 +12,11 @@ export default function MessageList({ messages, onListen }) {
         return (
           <View
             key={message.id}
-            style={[styles.message, user ? styles.messageUser : null]}
+            style={[
+              styles.message,
+              user ? styles.messageUser : null,
+              message.kind === 'publishedPrice' ? styles.priceMessage : null,
+            ]}
             testID={
               message.historical ? 'message-historical' : 'message-current'
             }
@@ -23,7 +27,18 @@ export default function MessageList({ messages, onListen }) {
                 {message.createdAt ? ` · ${message.createdAt}` : ''}
               </Text>
             ) : null}
-            {message.kind === 'price' ? (
+            {message.kind === 'publishedPrice' ? (
+              <View>
+                <Text style={styles.priceIntro}>{COPY.priceIntro}</Text>
+                {message.observations.map((observation) => (
+                  <PublishedPriceCard
+                    key={`${observation.label}-${observation.amount}`}
+                    observation={observation}
+                  />
+                ))}
+                <Text style={styles.publishedNote}>{COPY.notCurrentPrice}</Text>
+              </View>
+            ) : message.kind === 'price' ? (
               <View>
                 {message.historical ? null : (
                   <Text style={styles.priceIntro}>{COPY.priceIntro}</Text>
@@ -58,6 +73,10 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     maxWidth: '88%',
   },
+  priceMessage: {
+    alignSelf: 'stretch',
+    maxWidth: '100%',
+  },
   messageUser: {
     alignSelf: 'flex-end',
   },
@@ -84,6 +103,12 @@ const styles = StyleSheet.create({
     color: colors.text,
     fontSize: 16,
     lineHeight: 22,
+  },
+  publishedNote: {
+    color: colors.muted,
+    fontSize: 15,
+    lineHeight: 22,
+    marginTop: 8,
   },
   historical: {
     color: colors.historical,
