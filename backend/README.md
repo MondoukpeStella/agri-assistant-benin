@@ -39,6 +39,7 @@ cp .env.example .env
 | `POSTGRES_USER` | pour Docker | aucune | utilisateur local |
 | `POSTGRES_PASSWORD` | pour Docker | aucune | mot de passe local, jamais commité |
 | `POSTGRES_DB` | pour Docker | aucune | `agri_dev` en développement |
+| `FRENCH_LLM` | non | `off` | `off`, `qwen` |
 
 Si `APP_ENV` est absente ou invalide, le processus s'arrête avant d'écouter. Le message cite le nom du paramètre et ne répète pas la valeur reçue. Une origine CORS `*` est refusée.
 
@@ -106,9 +107,21 @@ La documentation interactive est disponible en `development` et `test` sur `/doc
 
 `POST /api/v1/probe` accepte un objet JSON `{"message":"..."}` afin de vérifier la validation des requêtes. Cette route ne consulte pas de prix.
 
+## Voix française
+
+`POST /api/v1/voice/french` accepte `{"text":"..."}` ou `{"audio_base64":"..."}`. La réponse contient `status`, `transcript`, `reply`, et éventuellement `product` et `market`. Elle ne contient pas de montant.
+
+La lecture des mots se fait d'abord par des règles fixes : maïs, riz, Natitingou, Savalou. Le soja et Parakou reçoivent une phrase hors périmètre. Tant qu'aucune observation validée n'est fournie au composeur, une question comprise se répond par « Je ne dispose pas actuellement d'un prix validé. »
+
+`FRENCH_LLM=qwen` charge localement `Qwen/Qwen2.5-0.5B-Instruct` (Apache 2.0) avec `transformers`. Le modèle ne peut renvoyer que les jetons `maize`, `rice`, `natitingou` et `savalou`. Un montant ou une devise dans sa sortie est ignoré. La valeur par défaut est `off`, donc l'installation habituelle ne télécharge aucun poids.
+
+La reconnaissance audio utilise `faster-whisper` (MIT), langue forcée `fr`, taille `small`. `transformers` et `faster-whisper` ne sont pas dans les dépendances verrouillées : s'ils sont absents, l'audio répond que la reconnaissance n'est pas disponible, sans prix. La synthèse sur le téléphone utilise la voix française de l'appareil. Piper (`fr_FR-siwis-medium`, CC-BY 4.0, moteur GPL-3.0) n'est pas intégré.
+
 ## Observation de prix
 
-Le modèle interne vit dans `app/domain/price_observation.py`. `app/services/supplier_mapping.py` traduit un enregistrement déjà exprimé dans les jetons de l'application (`maize`, `rice`, `natitingou`, `savalou`). Ces jetons ne sont pas les champs AgroFlux. Aucune route ne renvoie encore un prix. La décision est dans [`docs/decisions/ADR-004-price-observation-model.md`](../docs/decisions/ADR-004-price-observation-model.md).
+Le modèle interne vit dans `app/domain/price_observation.py`. `app/services/supplier_mapping.py` traduit un enregistrement déjà exprimé dans les jetons de l'application (`maize`, `rice`, `natitingou`, `savalou`). Ces jetons ne sont pas les champs AgroFlux. Cette route n'appelle pas AgroFlux.
+
+`GET /api/v1/prices/wfp?product=maize&market=natitingou` lit l'extrait WFP versionné dans `data/wfp/`. La source est le jeu HDX [Benin - Food Prices](https://data.humdata.org/dataset/wfp-food-prices-for-benin), licence CC BY-IGO, fichier mis à jour le 15 novembre 2026. L'extrait conserve le maïs et le riz pour Natitingou et Savalou. Chaque montant est recopié, avec sa date de collecte, son unité et le nom de la denrée publiée (`Maize (white)`, `Rice (imported)`, etc.). `current` vaut `false` : une observation mensuelle n'est pas le prix du jour. La décision sur le modèle d'observation est dans [`docs/decisions/ADR-004-price-observation-model.md`](../docs/decisions/ADR-004-price-observation-model.md).
 
 ## Vérifications
 

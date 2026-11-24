@@ -8,6 +8,7 @@ from app.core.database_url import normalize_database_url
 
 AppEnv = Literal["development", "test", "production"]
 LogLevel = Literal["DEBUG", "INFO", "WARNING", "ERROR"]
+FrenchLlm = Literal["off", "qwen"]
 
 
 class Settings(BaseSettings):
@@ -20,6 +21,7 @@ class Settings(BaseSettings):
     log_level: LogLevel = "INFO"
     cors_origins: str = Field(default="")
     database_url: str = ""
+    french_llm: FrenchLlm = "off"
 
     @field_validator("database_url")
     @classmethod

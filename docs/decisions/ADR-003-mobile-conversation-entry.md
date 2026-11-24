@@ -18,7 +18,7 @@ Le socle Expo affichait un écran technique. Le premier parcours agriculteur cho
 
 Le navigateur interne suit la maquette : Démarrer, le choix de langue confirmé par Continuer, l'introduction, puis la conversation. Au lancement suivant, Démarrer rouvre le choix de langue avec la langue déjà mémorisée. Continuer ouvre alors la conversation. Le français propose la saisie, les suggestions et le micro de la barre, comme la maquette. Le fon n'affiche pas de texte : seulement le grand micro. Si l'enregistrement ne fournit rien, la page reste sans phrase de secours. Aucune phrase fon n'est affichée : l'introduction vocale reste marquée non validée tant qu'un locuteur natif ne l'a pas fournie. Le micro ouvre l'écran « Je vous écoute… » et n'envoie une demande qu'après une transcription fournie puis confirmée. L'en-tête ouvre Réglages. Cette page mène à l'historique ou au changement de langue, sans repasser par l'introduction. Les états de réponse, y compris un prix complet, sont affichés par des composants purs. L'application réelle ne leur fournit pas de prix. Le montant d'exemple de la maquette n'est pas repris.
 
-L'historique de sept jours reste l'objet de l'issue 006. Depuis Réglages, Historique des conversations ne liste que les messages déjà marqués comme historiques.
+L'enregistrement pendant sept jours est décidé dans l'ADR-006. Depuis Réglages, Historique des conversations ne liste que les messages déjà marqués comme historiques.
 
 ## Justification
 

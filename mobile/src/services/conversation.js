@@ -14,6 +14,10 @@ export function createConversation(messages = []) {
   };
 }
 
+export function containsMoneyAmount(text) {
+  return /\d/.test(text) && /fcfa|xof/i.test(text);
+}
+
 export function canShowPrice(price) {
   if (!price || price.validated !== true) {
     return false;
@@ -116,8 +120,19 @@ export function beginListening(state) {
   };
 }
 
-export function finishListening(state, rawText) {
+export function beginTranscribing(state) {
   if (state.phase !== 'listening') {
+    return state;
+  }
+  return {
+    ...state,
+    phase: 'transcribing',
+    notice: null,
+  };
+}
+
+export function finishListening(state, rawText) {
+  if (state.phase !== 'listening' && state.phase !== 'transcribing') {
     return state;
   }
   const text = String(rawText ?? '').trim();
@@ -166,8 +181,78 @@ export function cancelTranscription(state) {
   return cancelVoice(state);
 }
 
+export function revealTranscript(state, question) {
+  if (
+    state.phase !== 'transcribing' &&
+    state.phase !== 'transcriptionConfirm'
+  ) {
+    return state;
+  }
+  const asked = String(question ?? '').trim();
+  if (!asked) {
+    return state;
+  }
+  return {
+    ...state,
+    draft: '',
+    pendingText: null,
+    pendingTranscription: null,
+    phase: 'answering',
+    notice: null,
+    messages: [
+      ...state.messages,
+      createMessage({ role: 'user', kind: 'text', text: asked }),
+    ],
+  };
+}
+
+export function completeVoiceQuestion(state, question, result) {
+  if (
+    state.phase !== 'transcribing' &&
+    state.phase !== 'transcriptionConfirm' &&
+    state.phase !== 'answering'
+  ) {
+    return state;
+  }
+  const asked = String(question ?? '').trim();
+  const last = state.messages[state.messages.length - 1];
+  const alreadyShown =
+    Boolean(asked) && last?.role === 'user' && last.text === asked;
+  const base = {
+    ...state,
+    draft: '',
+    pendingText: null,
+    pendingTranscription: null,
+    messages:
+      asked && !alreadyShown
+        ? [
+            ...state.messages,
+            createMessage({ role: 'user', kind: 'text', text: asked }),
+          ]
+        : state.messages,
+  };
+  return applyResult(base, result);
+}
+
 function applyResult(state, result) {
   const kind = result?.kind ?? 'unavailable';
+  const observations = publishedObservationsOf(result);
+  if (kind === 'publishedPrice' && observations.length > 0) {
+    return {
+      ...state,
+      phase: 'publishedPrice',
+      notice: null,
+      messages: [
+        ...state.messages,
+        createMessage({
+          role: 'assistant',
+          kind: 'publishedPrice',
+          text: COPY.notCurrentPrice,
+          observations,
+        }),
+      ],
+    };
+  }
   if (kind === 'price' && canShowPrice(result.price)) {
     return {
       ...state,
@@ -178,6 +263,7 @@ function applyResult(state, result) {
         createMessage({
           role: 'assistant',
           kind: 'price',
+          responseStatus: 'price',
           price: { ...result.price, historical: false },
           historical: false,
         }),
@@ -193,17 +279,51 @@ function applyResult(state, result) {
     notice: phase,
     messages: [
       ...state.messages,
-      createMessage({ role: 'assistant', kind: 'text', text }),
+      createMessage({
+        role: 'assistant',
+        kind: 'text',
+        text,
+        responseStatus: kind,
+      }),
     ],
   };
 }
 
+function publishedObservationsOf(result) {
+  if (!Array.isArray(result?.observations)) {
+    return [];
+  }
+  return result.observations.filter(
+    (row) =>
+      row &&
+      typeof row.label === 'string' &&
+      row.label.trim() !== '' &&
+      typeof row.market === 'string' &&
+      row.market.trim() !== '' &&
+      typeof row.amount === 'string' &&
+      row.amount.trim() !== '' &&
+      typeof row.currency === 'string' &&
+      row.currency.trim() !== '' &&
+      typeof row.unit === 'string' &&
+      row.unit.trim() !== '' &&
+      typeof row.collectedOn === 'string' &&
+      row.collectedOn.trim() !== '',
+  );
+}
+
 function messageFor(kind, result) {
+  const supplied = result?.text?.trim() || '';
+  if (kind === 'publishedPrice') {
+    return supplied;
+  }
+  if (containsMoneyAmount(supplied)) {
+    return COPY.noValidated;
+  }
   if (kind === 'clarification') {
-    return result.text?.trim() || COPY.clarificationFallback;
+    return supplied || COPY.clarificationFallback;
   }
   if (kind === 'marketUncovered') {
-    return result.text?.trim() || COPY.uncovered;
+    return supplied || COPY.uncovered;
   }
   if (kind === 'noValidatedData' || kind === 'price') {
     return COPY.noValidated;
@@ -214,13 +334,16 @@ function messageFor(kind, result) {
 function createMessage(fields) {
   nextMessageId += 1;
   return {
-    id: `m${nextMessageId}`,
+    id: `m${nextMessageId}-${Date.now().toString(36)}-${Math.random()
+      .toString(36)
+      .slice(2, 8)}`,
     role: 'user',
     kind: 'text',
     text: '',
     price: null,
     historical: false,
     createdAt: null,
+    responseStatus: 'question',
     ...fields,
   };
 }

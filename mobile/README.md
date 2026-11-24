@@ -53,6 +53,8 @@ cp .env.example .env
 
 `.env` est ignoré par Git. Seul `.env.example` est versionné. La valeur acceptée de `EXPO_PUBLIC_APP_ENV` est un nom court composé de lettres, de chiffres, de `_` ou de `-`. Toute autre valeur est ignorée et remplacée par `development`.
 
+`EXPO_PUBLIC_API_URL` est facultative. Sans elle, une question française déjà claire est lue par la voix du téléphone, avec la phrase « Je ne dispose pas actuellement d'un prix validé. » quand le maïs ou le riz et un marché couvert sont reconnus. Des halos entourent le micro pendant l'écoute. L'écran affiche ensuite « Un instant… », puis lit la réponse. Si aucun mot n'est reconnu, la réponse est « Je n'ai pas bien compris. Pouvez-vous répéter ? ». Avec une adresse `http` ou `https`, la même question part vers `POST /api/v1/voice/french`. Une transcription vide n'affiche aucun prix.
+
 ## Scripts
 
 | Commande               | Rôle                                           |
@@ -83,6 +85,12 @@ mobile/
 ```
 
 `RootNavigator` enchaîne le choix de langue, l'introduction et la conversation. Aucune bibliothèque de navigation n'est installée. La langue choisie est mémorisée localement. Les dossiers `hooks` et `utils` seront ajoutés lorsqu'une issue en aura l'usage.
+
+## Historique local
+
+Les consultations qui ont reçu une réponse sont enregistrées dans SQLite sur le téléphone, pendant 7 jours. L'engrenage ouvre Réglages, puis Historique des conversations. Un message relu porte la mention historique et sa date ; ce n'est pas un prix actualisé. Une demande sans connexion n'est pas enregistrée et ne produit pas de montant. La comparaison des 7 jours utilise l'horloge du téléphone. Si cette horloge est avancée, une conversation peut disparaître plus tôt. Un horodatage illisible n'est pas supprimé. Une base absente, par exemple après réinstallation, affiche un historique vide. Si le schéma local est plus récent que l'application, l'historique n'est pas effacé : l'écran indique qu'il n'est pas disponible.
+
+La décision est dans [`docs/decisions/ADR-006-local-conversation-history.md`](../docs/decisions/ADR-006-local-conversation-history.md).
 
 ## Vérifications
 
@@ -146,4 +154,4 @@ Le démarrage reste possible. L'application ouvre l'écran Démarrer.
 - La vérification sur téléphone Android est manuelle, avec Expo Go.
 - `npm audit` signale 22 vulnérabilités modérées, toutes transitives, dans `minimatch` et `glob`, ramenées par Expo SDK 58 et Jest 30. Aucune alerte haute ou critique n'est présente au 22 novembre 2026. Le correctif proposé par npm rétrograde Expo vers SDK 52 : il n'est pas appliqué. Le détail est dans l'ADR-001.
 - Le fichier `LICENSE` est la licence MIT du modèle Expo (copyright 650 Industries). La licence du produit n'est pas choisie dans cette issue.
-- Aucun fournisseur vocal, aucune clé et aucun appel réseau métier ne sont inclus.
+- La voix française utilise la synthèse du téléphone (`fr-FR`) et, si `EXPO_PUBLIC_API_URL` est définie, la reconnaissance locale du serveur. Aucune clé d'un fournisseur payant n'est incluse. Une réponse parlée ne contient un montant que lorsqu'une observation validée est déjà affichée.

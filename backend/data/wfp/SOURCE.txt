@@ -1,0 +1,10 @@
+Source: World Food Programme, Benin - Food Prices.
+Page: https://data.humdata.org/dataset/wfp-food-prices-for-benin
+File: wfp_food_prices_ben.csv
+Resource last modified: 2026-11-15
+License: Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)
+https://creativecommons.org/licenses/by/3.0/igo/legalcode
+
+This extract keeps maize and rice observations for the markets Natitingou and Savalou.
+Other commodities and markets from the original file are not included.
+Prices are copied as published. They are monthly retail observations, not today's price.
