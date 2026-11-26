@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from typing import Literal
 
@@ -50,7 +51,19 @@ def load_settings(*, env_file: str | None = ".env") -> Settings:
     try:
         return Settings(_env_file=selected_file)
     except ValidationError as exc:
+        if _vercel_omitted_app_env(exc):
+            return Settings(app_env="production", _env_file=None)
         raise SystemExit(_configuration_message(exc)) from None
+
+
+def _vercel_omitted_app_env(exc: ValidationError) -> bool:
+    """Vercel does not provide APP_ENV unless the project settings do."""
+    if not os.environ.get("VERCEL") or os.environ.get("APP_ENV"):
+        return False
+    return any(
+        error.get("type") == "missing" and error.get("loc") == ("app_env",)
+        for error in exc.errors()
+    )
 
 
 def _configuration_message(exc: ValidationError) -> str:
