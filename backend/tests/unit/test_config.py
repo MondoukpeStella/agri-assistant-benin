@@ -65,6 +65,19 @@ def test_test_environment_rejects_the_development_database(
     assert "secret-dev" not in message
 
 
+def test_vercel_without_app_env_starts_in_production(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setenv("VERCEL", "1")
+    monkeypatch.delenv("APP_ENV", raising=False)
+    monkeypatch.delenv("DATABASE_URL", raising=False)
+
+    settings = load_settings(env_file=None)
+
+    assert settings.app_env == "production"
+    assert settings.database_url == ""
+
+
 def test_wildcard_cors_origin_is_rejected(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setenv("APP_ENV", "development")
     monkeypatch.setenv("CORS_ORIGINS", "*")

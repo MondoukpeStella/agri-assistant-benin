@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 from app.api.database import router as database_router
 from app.api.health import router as health_router
@@ -47,13 +48,31 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     return _mount(application, resolved)
 
 
-_settings = load_settings()
-configure_logging(_settings)
+try:
+    _settings: Settings | None = load_settings()
+except SystemExit:
+    _settings = None
+
+_production = _settings is None or _settings.app_env == "production"
 app = FastAPI(
     title="Assistant agricole",
     version="0.1.0",
-    docs_url=None if _settings.app_env == "production" else "/docs",
-    redoc_url=None if _settings.app_env == "production" else "/redoc",
-    openapi_url=None if _settings.app_env == "production" else "/openapi.json",
+    docs_url=None if _production else "/docs",
+    redoc_url=None if _production else "/redoc",
+    openapi_url=None if _production else "/openapi.json",
 )
-_mount(app, _settings)
+if _settings is None:
+
+    @app.api_route(
+        "/{full_path:path}",
+        methods=["GET", "POST", "HEAD"],
+    )
+    def configuration_invalid(_full_path: str) -> JSONResponse:
+        return JSONResponse(
+            status_code=500,
+            content={"status": "configuration_invalid"},
+        )
+
+else:
+    configure_logging(_settings)
+    _mount(app, _settings)
