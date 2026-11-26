@@ -22,6 +22,7 @@ class Settings(BaseSettings):
     cors_origins: str = Field(default="")
     database_url: str = ""
     french_llm: FrenchLlm = "off"
+    whatsapp_verify_token: str = ""
 
     @field_validator("database_url")
     @classmethod
